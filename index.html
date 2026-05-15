@@ -121,8 +121,8 @@
       radial-gradient(circle at 82% 88%, rgba(211, 178, 115, 0.06) 0%, transparent 45%),
       var(--navy);
     color: var(--white);
-    min-height: 100vh;
-    padding: 180px 40px 80px;
+    min-height: 88vh;
+    padding: 150px 40px 90px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -221,7 +221,7 @@
      COMMON SECTION
      ========================================================= */
   section.block {
-    padding: 110px 0;
+    padding: 80px 0;
     position: relative;
   }
   section.block.light { background: var(--paper); }
@@ -255,8 +255,8 @@
     color: var(--ink-soft);
     font-weight: 400;
     line-height: 1.5;
-    margin-bottom: 60px;
-    padding-bottom: 30px;
+    margin-bottom: 40px;
+    padding-bottom: 22px;
     border-bottom: 1px solid var(--rule);
     max-width: 720px;
   }
@@ -858,6 +858,547 @@
   .social-links a:hover { color: var(--gold); }
 
   /* =========================================================
+     VISION & MISSION — inline strip inside About
+     ========================================================= */
+  .vm-inline {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    margin-top: 56px;
+    padding-top: 44px;
+    border-top: 1px solid var(--rule);
+  }
+  .vm-inline-panel {
+    position: relative;
+    padding-left: 22px;
+    border-left: 2px solid var(--gold);
+  }
+  .vm-inline-label {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .vm-inline-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--ink);
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  /* =========================================================
+     ACCORDION SECTIONS — luxury motion system
+     ========================================================= */
+  :root {
+    --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-spring: cubic-bezier(0.34, 1.45, 0.64, 1);
+  }
+
+  .accordion-section {
+    padding: 0;
+    border-top: 1px solid var(--rule);
+    position: relative;
+    transition: background 0.4s ease;
+  }
+  .accordion-section:last-of-type { border-bottom: 1px solid var(--rule); }
+  .accordion-section.light { background: var(--paper); }
+  .accordion-section.white { background: var(--white); }
+  .accordion-section.navy {
+    background: var(--navy);
+    color: var(--white);
+    border-top: 1px solid rgba(211, 178, 115, 0.18);
+  }
+  .accordion-section.navy + .accordion-section { border-top: 1px solid var(--rule); }
+
+  /* Gold left-edge accent that slides down when section is active */
+  .accordion-section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--gold);
+    transform: scaleY(0);
+    transform-origin: top center;
+    transition: transform 0.8s var(--ease-expo);
+    pointer-events: none;
+    z-index: 2;
+  }
+  .accordion-section.is-open::before { transform: scaleY(1); }
+
+  /* Subtle background warmth on the active section */
+  .accordion-section.is-open { background: var(--white); }
+  .accordion-section.light.is-open { background: var(--paper); }
+  .accordion-section.navy.is-open { background: var(--navy); }
+
+  .accordion-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    width: 100%;
+    padding: 48px 0;
+    background: transparent;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+    color: inherit;
+    transition: padding 0.5s var(--ease-expo);
+    position: relative;
+  }
+  .accordion-trigger:focus { outline: none; }
+  .accordion-trigger:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+
+  /* Trigger nudges right when active — like a page turning */
+  .accordion-section.is-open .accordion-trigger { padding-left: 24px; }
+
+  .accordion-text { flex: 1; display: block; min-width: 0; }
+  .accordion-section .section-eyebrow {
+    display: block;
+    margin-bottom: 14px;
+    transition: letter-spacing 0.6s var(--ease-expo), color 0.4s ease;
+  }
+  .accordion-section.is-open .section-eyebrow { letter-spacing: 7px; }
+
+  .accordion-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 500;
+    color: var(--navy);
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+    margin-bottom: 14px;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 6px;
+    transition: color 0.4s ease;
+  }
+  .accordion-section.navy .accordion-title { color: var(--white); }
+  .accordion-trigger:hover .accordion-title,
+  .accordion-section.is-open .accordion-title { color: var(--gold); }
+
+  /* Gold rule draws under title on hover / when active */
+  .accordion-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.7s var(--ease-expo);
+  }
+  .accordion-trigger:hover .accordion-title::after,
+  .accordion-section.is-open .accordion-title::after { transform: scaleX(1); }
+
+  .accordion-lede {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-weight: 400;
+    line-height: 1.55;
+    max-width: 720px;
+    display: block;
+  }
+  .accordion-section.navy .accordion-lede { color: var(--gold-soft); }
+
+  .accordion-icon {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    position: relative;
+    background: transparent;
+    transition:
+      background 0.5s var(--ease-expo),
+      border-color 0.5s var(--ease-expo),
+      transform 0.7s var(--ease-spring);
+  }
+  .accordion-icon::before,
+  .accordion-icon::after {
+    content: '';
+    position: absolute;
+    background: var(--gold);
+    left: 50%;
+    top: 50%;
+    transition: background 0.5s var(--ease-expo), transform 0.5s var(--ease-spring);
+  }
+  .accordion-icon::before {
+    width: 16px;
+    height: 1px;
+    transform: translate(-50%, -50%);
+  }
+  .accordion-icon::after {
+    width: 1px;
+    height: 16px;
+    transform: translate(-50%, -50%);
+  }
+  .accordion-trigger:hover .accordion-icon {
+    background: rgba(211, 178, 115, 0.12);
+    transform: rotate(90deg);
+  }
+  .accordion-trigger[aria-expanded="true"] .accordion-icon {
+    background: var(--gold);
+    border-color: var(--gold);
+    transform: rotate(225deg);
+  }
+  .accordion-trigger[aria-expanded="true"] .accordion-icon::before,
+  .accordion-trigger[aria-expanded="true"] .accordion-icon::after {
+    background: var(--navy);
+  }
+  .accordion-trigger[aria-expanded="true"] .accordion-icon::after {
+    transform: translate(-50%, -50%) scaleY(0);
+  }
+
+  .accordion-body {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.75s var(--ease-expo);
+  }
+  .accordion-trigger[aria-expanded="true"] + .accordion-body {
+    grid-template-rows: 1fr;
+  }
+  .accordion-inner {
+    overflow: hidden;
+  }
+  .accordion-inner-pad {
+    padding-top: 8px;
+    padding-bottom: 70px;
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.85s var(--ease-expo),
+      transform 0.85s var(--ease-expo);
+  }
+  .accordion-section.is-open .accordion-inner-pad {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.18s;
+  }
+
+  /* Cascade fade-up for the inner items (pillars, sector cards, etc.) */
+  .accordion-section .pillar,
+  .accordion-section .sector-card,
+  .accordion-section .sector-category,
+  .accordion-section .geo-tier,
+  .accordion-section .diff,
+  .accordion-section .industry,
+  .accordion-section .trend,
+  .accordion-section .pull {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.7s var(--ease-expo),
+      transform 0.7s var(--ease-expo);
+  }
+  .accordion-section.is-open .pillar,
+  .accordion-section.is-open .sector-card,
+  .accordion-section.is-open .sector-category,
+  .accordion-section.is-open .geo-tier,
+  .accordion-section.is-open .diff,
+  .accordion-section.is-open .industry,
+  .accordion-section.is-open .trend,
+  .accordion-section.is-open .pull {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  /* Stagger up to 6 children — covers every accordion grid we have */
+  .accordion-section.is-open .pillar:nth-child(1),
+  .accordion-section.is-open .sector-card:nth-child(1),
+  .accordion-section.is-open .diff:nth-child(1),
+  .accordion-section.is-open .industry:nth-child(1),
+  .accordion-section.is-open .trend:nth-child(1),
+  .accordion-section.is-open .geo-tier:nth-child(1) { transition-delay: 0.28s; }
+  .accordion-section.is-open .pillar:nth-child(2),
+  .accordion-section.is-open .sector-card:nth-child(2),
+  .accordion-section.is-open .diff:nth-child(2),
+  .accordion-section.is-open .industry:nth-child(2),
+  .accordion-section.is-open .trend:nth-child(2),
+  .accordion-section.is-open .geo-tier:nth-child(2) { transition-delay: 0.36s; }
+  .accordion-section.is-open .pillar:nth-child(3),
+  .accordion-section.is-open .sector-card:nth-child(3),
+  .accordion-section.is-open .diff:nth-child(3),
+  .accordion-section.is-open .industry:nth-child(3),
+  .accordion-section.is-open .trend:nth-child(3),
+  .accordion-section.is-open .geo-tier:nth-child(3) { transition-delay: 0.44s; }
+  .accordion-section.is-open .pillar:nth-child(4),
+  .accordion-section.is-open .sector-card:nth-child(4),
+  .accordion-section.is-open .diff:nth-child(4),
+  .accordion-section.is-open .industry:nth-child(4) { transition-delay: 0.52s; }
+  .accordion-section.is-open .pillar:nth-child(5),
+  .accordion-section.is-open .sector-card:nth-child(5),
+  .accordion-section.is-open .industry:nth-child(5) { transition-delay: 0.60s; }
+  .accordion-section.is-open .sector-card:nth-child(6),
+  .accordion-section.is-open .industry:nth-child(6) { transition-delay: 0.68s; }
+
+  /* Sector category second block (Non-Food) gets its own delay */
+  .accordion-section.is-open .sector-category:nth-child(2) { transition-delay: 0.34s; }
+
+  /* Accessibility: honour reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .accordion-section,
+    .accordion-section::before,
+    .accordion-trigger,
+    .accordion-icon,
+    .accordion-icon::before,
+    .accordion-icon::after,
+    .accordion-title,
+    .accordion-title::after,
+    .accordion-body,
+    .accordion-inner-pad,
+    .accordion-section .pillar,
+    .accordion-section .sector-card,
+    .accordion-section .sector-category,
+    .accordion-section .geo-tier,
+    .accordion-section .diff,
+    .accordion-section .industry,
+    .accordion-section .trend,
+    .accordion-section .pull,
+    .accordion-section .section-eyebrow {
+      transition-duration: 0.01ms !important;
+      transition-delay: 0ms !important;
+    }
+  }
+
+  /* =========================================================
+     CREATIVE MOTION LAYER
+     ========================================================= */
+
+  /* Scroll progress — thin gold line at top of viewport */
+  .scroll-progress {
+    position: fixed;
+    top: 0; left: 0;
+    height: 2px;
+    width: 0%;
+    background: var(--gold);
+    z-index: 2000;
+    box-shadow: 0 0 14px rgba(211, 178, 115, 0.55);
+    transition: width 0.08s linear;
+    pointer-events: none;
+  }
+
+  /* HERO — sequenced entrance on load */
+  .hero .hero-logo,
+  .hero .hero-eyebrow,
+  .hero .hero-subtitle,
+  .hero .hero-scroll {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+      opacity 1.05s var(--ease-expo),
+      transform 1.05s var(--ease-expo);
+  }
+  .hero.is-loaded .hero-logo      { opacity: 1; transform: translateY(0); transition-delay: 0.05s; }
+  .hero.is-loaded .hero-eyebrow   { opacity: 1; transform: translateY(0); transition-delay: 0.40s; }
+  .hero.is-loaded .hero-subtitle  { opacity: 1; transform: translateY(0); transition-delay: 1.10s; }
+  .hero.is-loaded .hero-scroll    { opacity: 1; transform: translateY(0); transition-delay: 1.45s; }
+
+  /* Hero rule — gold line draws from center outward */
+  .hero .hero-rule {
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 1s var(--ease-expo);
+  }
+  .hero.is-loaded .hero-rule {
+    transform: scaleX(1);
+    transition-delay: 0.30s;
+  }
+
+  /* Hero title — word-by-word cascade reveal */
+  .hero-title { overflow: visible; }
+  .hero-title .word {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    line-height: 1.05;
+    padding-bottom: 0.05em;
+  }
+  .hero-title .word > span {
+    display: inline-block;
+    transform: translateY(110%);
+    transition: transform 1.15s var(--ease-expo);
+  }
+  .hero.is-loaded .hero-title .word > span { transform: translateY(0); }
+  .hero-title .word:nth-child(1)  > span { transition-delay: 0.45s; }
+  .hero-title .word:nth-child(2)  > span { transition-delay: 0.52s; }
+  .hero-title .word:nth-child(3)  > span { transition-delay: 0.59s; }
+  .hero-title .word:nth-child(4)  > span { transition-delay: 0.66s; }
+  .hero-title .word:nth-child(5)  > span { transition-delay: 0.73s; }
+  .hero-title .word:nth-child(6)  > span { transition-delay: 0.80s; }
+  .hero-title .word:nth-child(7)  > span { transition-delay: 0.87s; }
+  .hero-title .word:nth-child(8)  > span { transition-delay: 0.94s; }
+  .hero-title .word:nth-child(9)  > span { transition-delay: 1.01s; }
+  .hero-title .word:nth-child(10) > span { transition-delay: 1.08s; }
+  .hero-title .word:nth-child(11) > span { transition-delay: 1.15s; }
+  .hero-title .word:nth-child(12) > span { transition-delay: 1.22s; }
+
+  /* Hero logo — soft gold sweep on load */
+  .hero-logo {
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-logo::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg, transparent 35%, rgba(211, 178, 115, 0.55) 50%, transparent 65%);
+    transform: translateX(-130%);
+    pointer-events: none;
+    mix-blend-mode: screen;
+  }
+  .hero.is-loaded .hero-logo::after {
+    animation: gold-sweep 1.6s 0.85s var(--ease-expo) 1 both;
+  }
+  @keyframes gold-sweep {
+    0%   { transform: translateX(-130%); }
+    100% { transform: translateX(130%); }
+  }
+
+  /* Hero CTA — magnetic + entrance fade */
+  .hero .hero-cta {
+    opacity: 0;
+    transform: translate(var(--tx, 0px), var(--ty, 0px));
+    transition:
+      opacity 1.05s var(--ease-expo),
+      background 0.25s,
+      color 0.25s,
+      transform 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.15);
+  }
+  .hero.is-loaded .hero-cta {
+    opacity: 1;
+    transition-delay: 1.25s, 0s, 0s, 0s;
+  }
+  .hero-cta:hover {
+    transform: translate(var(--tx, 0px), calc(var(--ty, 0px) - 3px));
+  }
+
+  /* Hero ambient parallax — radials respond to cursor */
+  .hero {
+    --mx: 0%;
+    --my: 0%;
+    background:
+      radial-gradient(circle at calc(18% + var(--mx)) calc(12% + var(--my)), rgba(211, 178, 115, 0.10) 0%, transparent 45%),
+      radial-gradient(circle at calc(82% - var(--mx)) calc(88% - var(--my)), rgba(211, 178, 115, 0.07) 0%, transparent 45%),
+      var(--navy);
+  }
+
+  /* Scroll-indicator gentle bob */
+  .hero.is-loaded .hero-scroll::after {
+    animation: scroll-bob 2.4s ease-in-out infinite;
+    transform-origin: top center;
+  }
+  @keyframes scroll-bob {
+    0%, 100% { transform: scaleY(1) translateY(0); opacity: 0.4; }
+    50%      { transform: scaleY(1.25) translateY(3px); opacity: 0.9; }
+  }
+
+  /* Section title — gold underline draws when title enters viewport */
+  .section-title { position: relative; }
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 56px;
+    height: 1px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.95s 0.18s var(--ease-expo);
+  }
+  .section-title.in-view::after { transform: scaleX(1); }
+
+  /* Reveal-on-scroll system */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.95s var(--ease-expo),
+      transform 0.95s var(--ease-expo);
+  }
+  .reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  /* Stagger via data-rd index */
+  .reveal[data-rd="0"] { transition-delay: 0.00s; }
+  .reveal[data-rd="1"] { transition-delay: 0.08s; }
+  .reveal[data-rd="2"] { transition-delay: 0.16s; }
+  .reveal[data-rd="3"] { transition-delay: 0.24s; }
+  .reveal[data-rd="4"] { transition-delay: 0.32s; }
+  .reveal[data-rd="5"] { transition-delay: 0.40s; }
+
+  /* Nav links — animated underline */
+  .nav-links a {
+    position: relative;
+    padding-bottom: 4px;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    bottom: 0;
+    height: 1px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 0.45s var(--ease-expo);
+  }
+  .nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+
+  /* Numeric flourish — discipline / pillar / diff / trend numerals get a subtle reveal */
+  .discipline-num, .pillar-num, .diff-num, .trend-num, .industry-num, .sector-card-num {
+    display: inline-block;
+    transition: transform 0.6s var(--ease-spring), color 0.3s;
+  }
+  .discipline:hover .discipline-num,
+  .pillar:hover .pillar-num,
+  .diff:hover .diff-num,
+  .industry:hover .industry-num,
+  .sector-card:hover .sector-card-num {
+    transform: translateY(-2px) scale(1.04);
+  }
+
+  /* Reduced-motion guard for the new layer */
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-progress,
+    .hero .hero-logo,
+    .hero .hero-rule,
+    .hero .hero-eyebrow,
+    .hero .hero-title,
+    .hero .hero-title .word > span,
+    .hero .hero-subtitle,
+    .hero .hero-cta,
+    .hero .hero-scroll,
+    .hero-logo::after,
+    .section-title::after,
+    .reveal,
+    .nav-links a::after {
+      transition-duration: 0.01ms !important;
+      transition-delay: 0ms !important;
+      animation: none !important;
+    }
+    .hero .hero-rule { transform: scaleX(1); }
+    .hero .hero-title .word > span { transform: translateY(0); }
+    .reveal { opacity: 1; transform: none; }
+    .section-title::after { transform: scaleX(1); }
+  }
+
+  /* =========================================================
      RESPONSIVE
      ========================================================= */
   @media (max-width: 900px) {
@@ -895,10 +1436,23 @@
     .hero-scroll { display: none; }
 
     /* Sections */
-    section.block { padding: 70px 0; }
+    section.block { padding: 56px 0; }
     .section-eyebrow { font-size: 10px; letter-spacing: 4px; margin-bottom: 14px; }
     .section-title { font-size: 32px; line-height: 1.1; }
-    .section-lede { font-size: 16px; line-height: 1.55; margin-bottom: 40px; padding-bottom: 24px; }
+    .section-lede { font-size: 16px; line-height: 1.55; margin-bottom: 32px; padding-bottom: 22px; }
+
+    /* Accordion mobile */
+    .accordion-trigger { padding: 32px 0; gap: 24px; }
+    .accordion-title { font-size: 26px; line-height: 1.15; margin-bottom: 10px; }
+    .accordion-lede { font-size: 15px; line-height: 1.55; }
+    .accordion-icon { width: 40px; height: 40px; }
+    .accordion-icon::before { width: 12px; }
+    .accordion-icon::after { height: 12px; }
+    .accordion-inner-pad { padding-bottom: 48px; }
+
+    /* Vision/Mission inline mobile */
+    .vm-inline { grid-template-columns: 1fr; gap: 28px; margin-top: 36px; padding-top: 32px; }
+    .vm-inline-text { font-size: 17px; }
 
     /* All grids collapse to 1 column */
     .discipline-grid, .vm-grid, .differentiators,
@@ -1054,35 +1608,34 @@
           <div class="discipline-desc">Performance-driven campaigns and B2B lead generation across Saudi Arabia and Egypt.</div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ============================ VISION & MISSION ============================ -->
-  <section class="block navy">
-    <div class="container">
-      <div class="section-eyebrow">02 — Direction</div>
-      <h2 class="section-title">Vision &amp; Mission</h2>
-      <p class="section-lede">What we aspire to build, and how we deliver it for our clients every day.</p>
-
-      <div class="vm-grid">
-        <div class="vm-panel">
-          <div class="vm-label">Our Vision</div>
-          <div class="vm-text">To become the leading growth and market-entry partner empowering international and regional businesses to enter, scale, and lead across the Saudi, Egyptian, and wider MENA markets — turning ambition into measurable market presence.</div>
+      <div class="vm-inline">
+        <div class="vm-inline-panel">
+          <div class="vm-inline-label">Our Vision</div>
+          <div class="vm-inline-text">To become the leading growth and market-entry partner empowering international and regional businesses to enter, scale, and lead across the Saudi, Egyptian, and wider MENA markets — turning ambition into measurable market presence.</div>
         </div>
-        <div class="vm-panel">
-          <div class="vm-label">Our Mission</div>
-          <div class="vm-text">We accelerate sustainable growth for our clients by combining strategic marketing, business development, brand positioning, and digital execution — staying accountable to results from market study to long-term growth.</div>
+        <div class="vm-inline-panel">
+          <div class="vm-inline-label">Our Mission</div>
+          <div class="vm-inline-text">We accelerate sustainable growth for our clients by combining strategic marketing, business development, brand positioning, and digital execution — staying accountable to results from market study to long-term growth.</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============================ SERVICES ============================ -->
-  <section class="block light" id="services">
+  <section class="accordion-section light" id="services">
     <div class="container">
-      <div class="section-eyebrow">03 — Services</div>
-      <h2 class="section-title">What we do.</h2>
-      <p class="section-lede">Five service pillars covering the full lifecycle of market entry and brand growth — delivered by one accountable team.</p>
+      <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="services-body">
+        <span class="accordion-text">
+          <span class="section-eyebrow">02 — Services</span>
+          <span class="accordion-title">What we do.</span>
+          <span class="accordion-lede">Five service pillars covering the full lifecycle of market entry and brand growth — delivered by one accountable team.</span>
+        </span>
+        <span class="accordion-icon" aria-hidden="true"></span>
+      </button>
+      <div class="accordion-body" id="services-body">
+       <div class="accordion-inner">
+        <div class="accordion-inner-pad">
 
       <div class="pillars">
         <div class="pillar">
@@ -1121,15 +1674,27 @@
           </div>
         </div>
       </div>
+
+        </div>
+       </div>
+      </div>
     </div>
   </section>
 
   <!-- ============================ COVERAGE ============================ -->
-  <section class="block white" id="coverage">
+  <section class="accordion-section white" id="coverage">
     <div class="container">
-      <div class="section-eyebrow">04 — Coverage</div>
-      <h2 class="section-title">Sector &amp; geographic coverage.</h2>
-      <p class="section-lede">A multi-product, multi-country approach delivered with the same level of execution across every category we serve.</p>
+      <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="coverage-body">
+        <span class="accordion-text">
+          <span class="section-eyebrow">03 — Coverage</span>
+          <span class="accordion-title">Sector &amp; geographic coverage.</span>
+          <span class="accordion-lede">A multi-product, multi-country approach delivered with the same level of execution across every category we serve.</span>
+        </span>
+        <span class="accordion-icon" aria-hidden="true"></span>
+      </button>
+      <div class="accordion-body" id="coverage-body">
+       <div class="accordion-inner">
+        <div class="accordion-inner-pad">
 
       <div class="sectors-wrapper">
 
@@ -1222,15 +1787,27 @@
           <div class="tier-val">Wider MENA region through partner networks</div>
         </div>
       </div>
+
+        </div>
+       </div>
+      </div>
     </div>
   </section>
 
   <!-- ============================ WHY STEPS ============================ -->
-  <section class="block navy" id="why">
+  <section class="accordion-section navy" id="why">
     <div class="container">
-      <div class="section-eyebrow">05 — Why Steps</div>
-      <h2 class="section-title">Built for market entry. Run by people who know the region.</h2>
-      <p class="section-lede">For brands entering Saudi Arabia &amp; the GCC, the difference between a successful launch and a stalled one is rarely the product. It is regional expertise, channel access, and brand execution — delivered consistently.</p>
+      <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="why-body">
+        <span class="accordion-text">
+          <span class="section-eyebrow">04 — Why Steps</span>
+          <span class="accordion-title">Built for market entry. Run by people who know the region.</span>
+          <span class="accordion-lede">For brands entering Saudi Arabia &amp; the GCC, the difference between a successful launch and a stalled one is rarely the product. It is regional expertise, channel access, and brand execution — delivered consistently.</span>
+        </span>
+        <span class="accordion-icon" aria-hidden="true"></span>
+      </button>
+      <div class="accordion-body" id="why-body">
+       <div class="accordion-inner">
+        <div class="accordion-inner-pad">
 
       <div class="differentiators">
         <div class="diff">
@@ -1259,15 +1836,27 @@
         Steps Marketing is not the agency that hands you a campaign and disappears.
         <strong>We are the partner that takes you from market study to scaled distribution — and stays accountable for what we build.</strong>
       </div>
+
+        </div>
+       </div>
+      </div>
     </div>
   </section>
 
   <!-- ============================ INDUSTRIES ============================ -->
-  <section class="block white" id="industries">
+  <section class="accordion-section white" id="industries">
     <div class="container">
-      <div class="section-eyebrow">06 — Industries</div>
-      <h2 class="section-title">A growing client base across the region.</h2>
-      <p class="section-lede">We work with manufacturers, exporters, and service brands across six core industries — bringing cross-sector pattern recognition to every engagement.</p>
+      <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="industries-body">
+        <span class="accordion-text">
+          <span class="section-eyebrow">05 — Industries</span>
+          <span class="accordion-title">A growing client base across the region.</span>
+          <span class="accordion-lede">We work with manufacturers, exporters, and service brands across six core industries — bringing cross-sector pattern recognition to every engagement.</span>
+        </span>
+        <span class="accordion-icon" aria-hidden="true"></span>
+      </button>
+      <div class="accordion-body" id="industries-body">
+       <div class="accordion-inner">
+        <div class="accordion-inner-pad">
 
       <div class="industries-grid">
         <div class="industry">
@@ -1301,15 +1890,27 @@
           <div class="industry-desc">Service firms scaling regional operations and visibility.</div>
         </div>
       </div>
+
+        </div>
+       </div>
+      </div>
     </div>
   </section>
 
   <!-- ============================ STRATEGIC OUTLOOK ============================ -->
-  <section class="block light">
+  <section class="accordion-section light" id="outlook">
     <div class="container">
-      <div class="section-eyebrow">07 — Outlook</div>
-      <h2 class="section-title">Positioned at the intersection of three durable trends.</h2>
-      <p class="section-lede">Saudi Arabia &amp; the GCC are entering a decade of unprecedented commercial transformation. Steps Marketing is built to help brands move at that pace.</p>
+      <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="outlook-body">
+        <span class="accordion-text">
+          <span class="section-eyebrow">06 — Outlook</span>
+          <span class="accordion-title">Positioned at the intersection of three durable trends.</span>
+          <span class="accordion-lede">Saudi Arabia &amp; the GCC are entering a decade of unprecedented commercial transformation. Steps Marketing is built to help brands move at that pace.</span>
+        </span>
+        <span class="accordion-icon" aria-hidden="true"></span>
+      </button>
+      <div class="accordion-body" id="outlook-body">
+       <div class="accordion-inner">
+        <div class="accordion-inner-pad">
 
       <div class="trends">
         <div class="trend">
@@ -1334,13 +1935,17 @@
           </div>
         </div>
       </div>
+
+        </div>
+       </div>
+      </div>
     </div>
   </section>
 
   <!-- ============================ CONTACT ============================ -->
   <section class="block navy" id="contact">
     <div class="container">
-      <div class="section-eyebrow">08 — Contact</div>
+      <div class="section-eyebrow">07 — Contact</div>
       <h2 class="section-title">Let's build your presence in Saudi Arabia.</h2>
       <p class="section-lede">Tell us about your business and your market-entry goal. We'll respond within one business day.</p>
 
@@ -1461,6 +2066,160 @@
         document.querySelector('.nav-links').classList.remove('show');
       });
     });
+
+    // Accordion toggle — drives aria + .is-open for layered motion
+    document.querySelectorAll('.accordion-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const section = trigger.closest('.accordion-section');
+        const expanded = trigger.getAttribute('aria-expanded') === 'true';
+        const next = !expanded;
+        trigger.setAttribute('aria-expanded', String(next));
+        if (section) section.classList.toggle('is-open', next);
+      });
+    });
+
+    // Auto-expand accordion when linked via nav, footer, or any in-page anchor
+    function expandSection(id) {
+      const target = document.getElementById(id);
+      if (!target) return;
+      const trigger = target.querySelector('.accordion-trigger');
+      if (trigger) {
+        trigger.setAttribute('aria-expanded', 'true');
+        target.classList.add('is-open');
+      }
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', () => {
+        const id = link.getAttribute('href').slice(1);
+        if (!id) return;
+        expandSection(id);
+      });
+    });
+    // Respect deep links on page load
+    if (window.location.hash) {
+      expandSection(window.location.hash.slice(1));
+    }
+
+    // ===============================================================
+    //  CREATIVE MOTION LAYER
+    // ===============================================================
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const coarsePointer = window.matchMedia('(pointer: coarse)').matches;
+
+    // 1) Split hero title into per-word spans for the cascade reveal
+    (function splitHeroTitle() {
+      const title = document.querySelector('.hero-title');
+      if (!title) return;
+      const text = title.textContent.trim();
+      const words = text.split(/\s+/);
+      title.innerHTML = words
+        .map(w => '<span class="word"><span>' + w + '</span></span>')
+        .join(' ');
+    })();
+
+    // 2) Fire hero entrance after first paint
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        document.querySelector('.hero')?.classList.add('is-loaded');
+      });
+    });
+
+    // 3) Scroll progress — thin gold line at top of viewport
+    (function scrollProgress() {
+      const bar = document.createElement('div');
+      bar.className = 'scroll-progress';
+      document.body.prepend(bar);
+      const tick = () => {
+        const h = document.documentElement;
+        const max = Math.max(1, h.scrollHeight - h.clientHeight);
+        const pct = Math.min(100, (h.scrollTop / max) * 100);
+        bar.style.width = pct + '%';
+      };
+      window.addEventListener('scroll', tick, { passive: true });
+      window.addEventListener('resize', tick);
+      tick();
+    })();
+
+    // 4) Reveal-on-scroll for non-accordion content
+    (function setupReveals() {
+      const selectors = [
+        '.section-title',
+        '#about > .container > p',
+        '.discipline',
+        '.vm-panel',
+        '.vm-inline-item',
+        '.contact-side .contact-item',
+        '.contact-form',
+        '.footer-col',
+        '.footer-tagline'
+      ];
+      const targets = document.querySelectorAll(selectors.join(','));
+      targets.forEach(el => {
+        // Section-titles get the underline-draw instead of full fade-up
+        if (!el.classList.contains('section-title')) {
+          el.classList.add('reveal');
+        }
+        // Apply stagger within direct sibling groups
+        const sibs = Array.from(el.parentElement.children).filter(c => c.matches(selectors.join(',')));
+        const idx = sibs.indexOf(el);
+        if (idx >= 0 && idx <= 5) el.setAttribute('data-rd', String(idx));
+      });
+
+      if (!('IntersectionObserver' in window)) {
+        targets.forEach(el => el.classList.add('in-view'));
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -6% 0px' });
+      targets.forEach(el => io.observe(el));
+    })();
+
+    // 5) Magnetic CTA — cursor gently pulls the button (desktop only)
+    (function magnetic() {
+      if (reducedMotion || coarsePointer) return;
+      const cta = document.querySelector('.hero-cta');
+      if (!cta) return;
+      const strength = 14;
+      cta.addEventListener('mousemove', (e) => {
+        const r = cta.getBoundingClientRect();
+        const x = (e.clientX - r.left - r.width / 2) / r.width;
+        const y = (e.clientY - r.top - r.height / 2) / r.height;
+        cta.style.setProperty('--tx', (x * strength).toFixed(2) + 'px');
+        cta.style.setProperty('--ty', (y * strength).toFixed(2) + 'px');
+      });
+      cta.addEventListener('mouseleave', () => {
+        cta.style.setProperty('--tx', '0px');
+        cta.style.setProperty('--ty', '0px');
+      });
+    })();
+
+    // 6) Hero parallax — gold gradients track cursor (desktop only)
+    (function heroParallax() {
+      if (reducedMotion || coarsePointer) return;
+      const hero = document.querySelector('.hero');
+      if (!hero) return;
+      let raf = 0;
+      hero.addEventListener('mousemove', (e) => {
+        if (raf) cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(() => {
+          const r = hero.getBoundingClientRect();
+          const x = ((e.clientX - r.left) / r.width - 0.5) * 5;
+          const y = ((e.clientY - r.top) / r.height - 0.5) * 5;
+          hero.style.setProperty('--mx', x.toFixed(2) + '%');
+          hero.style.setProperty('--my', y.toFixed(2) + '%');
+        });
+      });
+      hero.addEventListener('mouseleave', () => {
+        hero.style.setProperty('--mx', '0%');
+        hero.style.setProperty('--my', '0%');
+      });
+    })();
   </script>
 
 </body>
