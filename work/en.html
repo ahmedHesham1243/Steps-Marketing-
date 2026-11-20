@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Work | Steps Marketing</title>
+<meta name="description" content="Steps Marketing's work: video, motion and animation in Arabic, Saudi dialect and English, plus production under your name for agencies.">
+<meta name="theme-color" content="#0B1020">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="canonical" href="https://steps-marketing.net/work/en.html">
+<link rel="alternate" hreflang="ar" href="https://steps-marketing.net/work/">
+<link rel="alternate" hreflang="en" href="https://steps-marketing.net/work/en.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Steps Marketing">
+<meta property="og:title" content="Work | Steps Marketing">
+<meta property="og:description" content="Steps Marketing's work: video, motion and animation in Arabic, Saudi dialect and English, plus production under your name for agencies.">
+<meta property="og:url" content="https://steps-marketing.net/work/en.html">
+<meta property="og:image" content="https://steps-marketing.net/work/og-work.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@500;700;800;900&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@500&display=swap">
+<style>
+/* English twin of the Arabic page: same reel-first layout, navy and gold, single dark theme. ?lead=<section id> moves one section to the top. */
+:root {
+  --bg: #0B1020;
+  --panel: #121A2F;
+  --ink: #F4EFE4;
+  --muted: #A1A8BA;
+  --line: #222C46;
+  --gold: #D4AF5F;
+  --gold-ink: #1A1408;
+  --font-display: "Alexandria", "Segoe UI", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.65; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap {
+  max-width: 1180px; margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+a { color: var(--gold); text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
+
+/* top bar */
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+.mark { display: inline-flex; align-items: baseline; gap: 6px; text-decoration: none; color: var(--ink); }
+.mark .w { font-family: var(--font-display); font-weight: 900; font-size: 1.5rem; letter-spacing: -.03em; }
+.mark .s { font-family: var(--font-display); font-weight: 500; font-size: .72rem; color: var(--muted); }
+.nav { display: flex; align-items: center; gap: 18px; font-size: .92rem; }
+.nav a { color: var(--ink); text-decoration: none; }
+.nav a:hover { color: var(--gold); }
+.nav a.lang { font-family: "IBM Plex Sans Arabic", var(--font-display); font-size: .82rem; color: var(--gold); border: 1px solid var(--gold); border-radius: 999px; padding: 1px 11px; }
+.nav a.lang:hover { background: var(--gold); color: var(--gold-ink); }
+
+/* hero */
+.hero { padding-block: 64px 28px; }
+.hero h1 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2.6rem, 8.4vw, 6rem); line-height: 1.04; letter-spacing: -.02em; margin: 0; text-wrap: balance; }
+.hero h1 .dots { color: var(--gold); }
+.hero-row { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 20px 40px; margin-top: 18px; }
+.hero .lede { max-width: 54ch; font-size: 1.12rem; margin: 0; }
+.cta { display: flex; flex-wrap: wrap; gap: 10px; }
+.cta a { text-decoration: none; font-weight: 600; padding: 10px 20px; border-radius: 999px; border: 1px solid var(--gold); white-space: nowrap; }
+.cta a.primary { background: var(--gold); color: var(--gold-ink); }
+
+/* tiles */
+.tile { position: relative; margin: 0; border-radius: 16px; overflow: hidden; background: var(--panel); border: 1px solid var(--line); min-width: 0; }
+.tile video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.tile.v { aspect-ratio: 9 / 16; }
+.tile.h { aspect-ratio: 16 / 9; }
+.tag {
+  font-size: .76rem; font-weight: 600; color: var(--ink);
+  background: rgba(8, 12, 24, .72); border: 1px solid rgba(255, 255, 255, .14); border-radius: 999px; padding: 2px 10px;
+  backdrop-filter: blur(4px);
+}
+.wall .tag { position: absolute; inset-inline-start: 10px; bottom: 10px; }
+.tile figcaption { position: absolute; inset: auto 0 0 0; padding: 30px 12px 10px; background: linear-gradient(to top, rgba(6, 9, 18, .9), rgba(6, 9, 18, 0)); display: grid; gap: 4px; justify-items: start; }
+.tile figcaption .t { font-family: var(--font-display); font-weight: 700; font-size: .92rem; line-height: 1.35; }
+
+.wall { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-top: 40px; }
+.feature { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 1fr); gap: 12px; margin-bottom: 12px; }
+.feature .tile.v { aspect-ratio: auto; height: 100%; }
+.grid4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+
+/* clients */
+.clients { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 34px; padding-block: 26px; border-block: 1px solid var(--line); margin-top: 44px; }
+.clients .lbl { color: var(--muted); font-size: .9rem; }
+.clients .c { font-family: var(--font-display); font-weight: 700; letter-spacing: .14em; font-size: 1rem; }
+
+/* sections */
+.sec { padding-block: 64px; border-bottom: 1px solid var(--line); scroll-margin-top: 64px; }
+.sec-head { display: grid; gap: 4px; margin-bottom: 26px; max-width: 760px; }
+.eyebrow { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .08em; color: var(--gold); margin: 0; }
+.sec-head h2 { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.6rem, 4.2vw, 2.5rem); line-height: 1.25; margin: 0; text-wrap: balance; }
+.sec-head p { margin: 8px 0 0; font-size: 1.04rem; }
+.did { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 18px 0 0; }
+.did li { border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 3px 12px; font-size: .88rem; }
+
+/* agencies */
+.points { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.points li { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px; min-width: 0; }
+.points h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; margin: 0 0 4px; color: var(--gold); }
+.points p { margin: 0; font-size: .93rem; color: var(--muted); }
+
+/* process + services */
+.steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; counter-reset: step; }
+.steps li { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px; counter-increment: step; min-width: 0; }
+.steps li::before { content: counter(step, decimal-leading-zero); display: block; font-family: var(--font-mono); font-size: .8rem; color: var(--gold); margin-bottom: 4px; }
+.steps h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; margin: 0 0 4px; }
+.steps p { margin: 0; font-size: .93rem; color: var(--muted); }
+.services { list-style: none; padding: 0; margin: 28px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.services li { padding: 16px 0; border-bottom: 1px solid var(--line); padding-inline-end: 16px; font-family: var(--font-display); font-weight: 700; font-size: 1.08rem; }
+
+/* contact */
+.contact { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 32px; align-items: start; }
+.contact h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2rem, 5.2vw, 3.1rem); line-height: 1.15; margin: 0 0 10px; text-wrap: balance; }
+.contact-lines { display: grid; gap: 10px; }
+.contact-lines a { display: block; border: 1px solid var(--line); background: var(--panel); border-radius: 12px; padding: 12px 14px; color: var(--ink); text-decoration: none; }
+.contact-lines a:hover { border-color: var(--gold); }
+.contact-lines span { display: block; font-size: .8rem; color: var(--muted); }
+.contact-lines b { font-weight: 600; font-size: 1.05rem; }
+.reply { margin: 4px 0 0; color: var(--muted); font-size: .92rem; }
+footer { padding-block: 26px 44px; color: var(--muted); font-size: .88rem; }
+
+@media (max-width: 900px) {
+  .nav a.opt { display: none; }
+  .steps, .services, .points { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .contact { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .wall, .grid4, .grid3 { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
+  .wall .tile, .grid4 .tile, .grid3 .tile { flex: 0 0 46%; scroll-snap-align: start; }
+  .feature { grid-template-columns: 1fr; }
+  .feature .tile.v { display: none; }
+}
+@media (max-width: 480px) {
+  .wall .tile, .grid4 .tile, .grid3 .tile { flex-basis: 64%; }
+  .steps, .services, .points { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Steps Marketing"><span class="w">Steps</span><span class="s">Marketing</span></a>
+    <nav class="nav" aria-label="Page sections">
+      <a href="#work">Work</a>
+      <a class="opt" href="#agencies">For agencies</a>
+      <a class="opt" href="#how">How we work</a>
+      <a href="#contact">Contact</a>
+      <a class="lang" href="index.html" lang="ar" hreflang="ar" dir="rtl">عربي</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero wrap" id="top">
+  <h1>Behind every business<span class="dots">…</span><br>a story.</h1>
+  <div class="hero-row">
+    <p class="lede">A content production studio from Cairo. A team of 6 making video, motion and animation in Arabic, Saudi dialect and English, always starting from the story that keeps your audience watching.</p>
+    <div class="cta">
+      <a class="primary" href="#work">See the work</a>
+      <a href="#contact">Start a project</a>
+    </div>
+  </div>
+
+  <div class="wall" aria-label="Highlights from our work">
+    <figure class="tile v"><video src="media/nx-night.mp4" autoplay muted loop playsinline preload="auto" aria-label="Novox: Riyadh Never Sleeps"></video><span class="tag">Saudi dialect</span></figure>
+    <figure class="tile v"><video src="media/gez-shoot.mp4" autoplay muted loop playsinline preload="auto" aria-label="Gez: shoot reel"></video><span class="tag">Shoot + graphics</span></figure>
+    <figure class="tile v"><video src="media/shahrazad.mp4" autoplay muted loop playsinline preload="auto" aria-label="Tales: Shahrazad"></video><span class="tag">Flat illustration</span></figure>
+    <figure class="tile v"><video src="media/gez-teaser.mp4" autoplay muted loop playsinline preload="auto" aria-label="Gez launch countdown"></video><span class="tag">Launch countdown</span></figure>
+    <figure class="tile v"><video src="media/chocolate.mp4" autoplay muted loop playsinline preload="auto" aria-label="A or B: Chocolate"></video><span class="tag">3D animation</span></figure>
+  </div>
+
+  <div class="clients">
+    <span class="lbl">Worked with</span>
+    <span class="c">FAHD FARES</span>
+    <span class="c">NOVOX</span>
+    <span class="c">BEGONIA</span>
+  </div>
+</header>
+
+<main id="work">
+
+<section class="sec wrap" id="novox">
+  <div class="sec-head">
+    <p class="eyebrow">NOVOX</p>
+    <h2>A tech product, understood in seconds, in more than one dialect.</h2>
+    <p>Novox is a voice assistant that answers customer calls. We made its product videos in several styles, including a series for the Saudi market in Saudi dialect.</p>
+  </div>
+  <div class="grid4">
+    <figure class="tile v"><video src="media/nx-night.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Riyadh Never Sleeps"></video><figcaption><span class="t">Riyadh Never Sleeps</span><span class="tag">Saudi dialect</span></figcaption></figure>
+    <figure class="tile v"><video src="media/nx-onecall.mp4" autoplay muted loop playsinline preload="metadata" aria-label="One Call"></video><figcaption><span class="t">One Call</span><span class="tag">Kinetic type</span></figcaption></figure>
+    <figure class="tile v"><video src="media/nx-ailies.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Straight Up"></video><figcaption><span class="t">Straight Up</span><span class="tag">Flat illustration</span></figcaption></figure>
+    <figure class="tile v"><video src="media/nx-asknovox.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Ask Novox"></video><figcaption><span class="t">Ask Novox</span><span class="tag">3D presenter</span></figcaption></figure>
+  </div>
+  <ul class="did">
+    <li>Product videos</li><li>Saudi-dialect scripts</li><li>4 visual styles</li>
+  </ul>
+</section>
+
+<section class="sec wrap" id="fahd">
+  <div class="sec-head">
+    <p class="eyebrow">FAHD FARES</p>
+    <h2>The launch campaign for the song “Gez”, from the first countdown to the last video.</h2>
+    <p>An official motion-comic video, a launch countdown to 11:11, a shoot reel with graphics, and pre-release videos.</p>
+  </div>
+  <div class="feature">
+    <figure class="tile h"><video src="media/gez-comic.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Gez: official video"></video><figcaption><span class="t">“Gez”: official video</span><span class="tag">Motion comic</span></figcaption></figure>
+    <figure class="tile v"><video src="media/gez-shoot.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Gez: shoot reel"></video><figcaption><span class="t">“Gez”: shoot reel</span><span class="tag">Shoot + graphics</span></figcaption></figure>
+  </div>
+  <ul class="did">
+    <li>Official video</li><li>Motion comic</li><li>Launch countdown</li><li>Shoot reel</li><li>Pre-release videos</li>
+  </ul>
+</section>
+
+<section class="sec wrap" id="series">
+  <div class="sec-head">
+    <p class="eyebrow">THE STEPS PAGE</p>
+    <h2>Story series we test on our own page first.</h2>
+    <p>“Tales”, “The Dilemma” and “A or B?”: a story from history or a question from everyday life, with a lesson for business owners in one line. Each series has its own visual style.</p>
+  </div>
+  <div class="grid3">
+    <figure class="tile v"><video src="media/baron.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Tales: The Baron"></video><figcaption><span class="t">Tales: The Baron</span><span class="tag">Flat illustration</span></figcaption></figure>
+    <figure class="tile v"><video src="media/flinch.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Edison and the Number"></video><figcaption><span class="t">Edison and the Number</span><span class="tag">Flat illustration</span></figcaption></figure>
+    <figure class="tile v"><video src="media/theseus.mp4" autoplay muted loop playsinline preload="metadata" aria-label="The Dilemma: Ship of Theseus"></video><figcaption><span class="t">The Dilemma: Ship of Theseus</span><span class="tag">Classic illustration</span></figcaption></figure>
+    <figure class="tile v"><video src="media/monalisa.mp4" autoplay muted loop playsinline preload="metadata" aria-label="The Mona Lisa"></video><figcaption><span class="t">The Mona Lisa</span><span class="tag">Archive documentary</span></figcaption></figure>
+    <figure class="tile v"><video src="media/planes.mp4" autoplay muted loop playsinline preload="metadata" aria-label="The Planes That Came Back"></video><figcaption><span class="t">The Planes That Came Back</span><span class="tag">Archive + graphics</span></figcaption></figure>
+    <figure class="tile v"><video src="media/whitefriday.mp4" autoplay muted loop playsinline preload="metadata" aria-label="White Friday"></video><figcaption><span class="t">White Friday</span><span class="tag">Documentary edit</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="sec wrap" id="real">
+  <div class="sec-head">
+    <p class="eyebrow">ADS &amp; SHOOTS</p>
+    <h2>Ads that ask one question, and footage shot on location.</h2>
+    <p>Direct ads for clinic and restaurant owners, and a real-footage video with kinetic text for a real estate broker.</p>
+  </div>
+  <div class="grid3">
+    <figure class="tile v"><video src="media/begonia.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Begonia: real estate video"></video><figcaption><span class="t">Begonia</span><span class="tag">Real estate</span></figcaption></figure>
+    <figure class="tile v"><video src="media/ad-clinic.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Ad for clinics"></video><figcaption><span class="t">“Does your clinic’s page look like every other clinic’s?”</span><span class="tag">Direct ad</span></figcaption></figure>
+    <figure class="tile v"><video src="media/ad-resto.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Ad for restaurants"></video><figcaption><span class="t">“Does your restaurant’s page look like every other restaurant’s?”</span><span class="tag">Direct ad</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="sec wrap" id="agencies">
+  <div class="sec-head">
+    <p class="eyebrow">FOR AGENCIES</p>
+    <h2>An extra production team for your agency, under your name.</h2>
+    <p>When demand outgrows your team, we produce behind the scenes, and everything reaches your client under your agency’s name.</p>
+  </div>
+  <ul class="points">
+    <li><h3>Under your name</h3><p>Our name appears on no file, and we never contact your client unless you ask us to.</p></li>
+    <li><h3>Fully confidential</h3><p>We sign an NDA before we receive a single file.</p></li>
+    <li><h3>First cut in 3 working days</h3><p>For a reel of up to 30 seconds, from approved script to a complete first cut.</p></li>
+    <li><h3>Saudi dialect</h3><p>Scripts and voiceover in Saudi dialect, as well as Modern Standard Arabic and English.</p></li>
+    <li><h3>Every format</h3><p>9:16, 1:1 and 16:9 in the same delivery, ready for every platform.</p></li>
+    <li><h3>Close to your time zone</h3><p>We work from Cairo, at most two hours behind Riyadh and Dubai, and reply within one working day.</p></li>
+  </ul>
+</section>
+
+<section class="sec wrap" id="how">
+  <div class="sec-head">
+    <p class="eyebrow">HOW WE WORK</p>
+    <h2>How we work</h2>
+  </div>
+  <ol class="steps">
+    <li><h3>Find the story</h3><p>We learn your business and your audience, then pick the story that keeps them watching.</p></li>
+    <li><h3>3 openings for every script</h3><p>The first three seconds decide everything, so we write three openings and you choose.</p></li>
+    <li><h3>A sample before any new look</h3><p>A short sample or stills before animation, so you never pay for something that doesn’t feel like you.</p></li>
+    <li><h3>Production</h3><p>Design, motion, editing and animation, in Arabic and English.</p></li>
+    <li><h3>A fixed final check</h3><p>Voice matches the script, no black frames, and the right size for every platform.</p></li>
+    <li><h3>A weekly report</h3><p>What worked, and one change for next week.</p></li>
+  </ol>
+  <ul class="services">
+    <li>Story reels</li>
+    <li>Motion graphics</li>
+    <li>Animation &amp; music videos</li>
+    <li>Saudi-dialect scripts &amp; voiceover</li>
+    <li>Launch campaigns</li>
+    <li>Content strategy &amp; competitor analysis</li>
+  </ul>
+</section>
+
+</main>
+
+<section class="sec wrap" id="contact">
+  <div class="contact">
+    <div>
+      <h2>Have a story? Let’s tell it together.</h2>
+      <p>Start with a 20-minute call. We hear about your business and send you a first idea before any commitment.</p>
+    </div>
+    <div class="contact-lines">
+      <a href="https://wa.me/201055772172" target="_blank" rel="noopener"><span>WhatsApp</span><b>+20 10 5577 2172</b></a>
+      <a href="mailto:ahmed@steps-marketing.net"><span>Email</span><b>ahmed@steps-marketing.net</b></a>
+      <a href="https://steps-marketing.net" target="_blank" rel="noopener"><span>Website</span><b>steps-marketing.net</b></a>
+      <p class="reply">We reply within one working day.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">Steps Marketing · Cairo · Arabic, Saudi dialect &amp; English</footer>
+
+<script>
+(function () {
+  try {
+    var lead = new URLSearchParams(window.location.search).get('lead');
+    var sec = lead && document.getElementById(lead);
+    var main = document.getElementById('work');
+    if (sec && main && sec.parentNode === main) main.insertBefore(sec, main.firstElementChild);
+  } catch (e) {}
+})();
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var vids = Array.prototype.slice.call(document.querySelectorAll('video'));
+  if (reduce) {
+    vids.forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); v.setAttribute('controls', ''); });
+    return;
+  }
+  if (!('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      var v = e.target;
+      if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+      else { v.pause(); }
+    });
+  }, { rootMargin: '120px 0px' });
+  vids.forEach(function (v) { io.observe(v); });
+})();
+</script>
+</body>
+</html>

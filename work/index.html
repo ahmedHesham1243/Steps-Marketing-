@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>أعمالنا | Steps Marketing</title>
+<meta name="description" content="أعمال Steps Marketing: فيديو وموشن وأنيميشن بالعربية واللهجة السعودية والإنجليزية، وفريق إنتاج إضافي للوكالات.">
+<meta name="theme-color" content="#0B1020">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="canonical" href="https://steps-marketing.net/work/">
+<link rel="alternate" hreflang="ar" href="https://steps-marketing.net/work/">
+<link rel="alternate" hreflang="en" href="https://steps-marketing.net/work/en.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Steps Marketing">
+<meta property="og:title" content="أعمالنا | Steps Marketing">
+<meta property="og:description" content="أعمال Steps Marketing: فيديو وموشن وأنيميشن بالعربية واللهجة السعودية والإنجليزية، وفريق إنتاج إضافي للوكالات.">
+<meta property="og:url" content="https://steps-marketing.net/work/">
+<meta property="og:image" content="https://steps-marketing.net/work/og-work.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@500;700;800;900&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
+<style>
+/* Layout: a reel-first studio page in Steps' navy and gold, pitched at Gulf clients. The work moves on screen before any text: a wall of vertical loops under the tagline, then cases as video grids with one short paragraph each, Saudi-dialect work first. Deliberately single dark theme, matching the Steps brand cover. A ?lead=<section id> link moves one section to the top, so each segment can get its own entry point. */
+:root {
+  --bg: #0B1020;
+  --panel: #121A2F;
+  --ink: #F4EFE4;
+  --muted: #A1A8BA;
+  --line: #222C46;
+  --gold: #D4AF5F;
+  --gold-ink: #1A1408;
+  --font-display: "Alexandria", "IBM Plex Sans Arabic", "Segoe UI", Tahoma, sans-serif;
+  --font-body: "IBM Plex Sans Arabic", "Segoe UI", Tahoma, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.75; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap {
+  max-width: 1180px; margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+a { color: var(--gold); text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
+.en { direction: ltr; unicode-bidi: isolate; color: var(--muted); font-size: .9rem; }
+
+/* top bar */
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+.mark { display: inline-flex; align-items: baseline; gap: 6px; direction: ltr; text-decoration: none; color: var(--ink); }
+.mark .w { font-family: var(--font-display); font-weight: 900; font-size: 1.5rem; letter-spacing: -.03em; }
+.mark .s { font-family: var(--font-display); font-weight: 500; font-size: .72rem; color: var(--muted); }
+.nav { display: flex; align-items: center; gap: 18px; font-size: .92rem; }
+.nav a { color: var(--ink); text-decoration: none; }
+.nav a:hover { color: var(--gold); }
+.nav a.lang { font-family: var(--font-display); font-size: .78rem; color: var(--gold); border: 1px solid var(--gold); border-radius: 999px; padding: 1px 11px; }
+.nav a.lang:hover { background: var(--gold); color: var(--gold-ink); }
+
+/* hero */
+.hero { padding-block: 64px 28px; }
+.hero h1 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2.8rem, 9vw, 6.4rem); line-height: 1.08; margin: 0; text-wrap: balance; }
+.hero h1 .dots { color: var(--gold); }
+.hero-row { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 20px 40px; margin-top: 18px; }
+.hero .lede { max-width: 52ch; font-size: 1.12rem; margin: 0; }
+.cta { display: flex; flex-wrap: wrap; gap: 10px; }
+.cta a { text-decoration: none; font-weight: 600; padding: 10px 20px; border-radius: 999px; border: 1px solid var(--gold); white-space: nowrap; }
+.cta a.primary { background: var(--gold); color: var(--gold-ink); }
+
+/* tiles */
+.tile { position: relative; margin: 0; border-radius: 16px; overflow: hidden; background: var(--panel); border: 1px solid var(--line); min-width: 0; }
+.tile video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.tile.v { aspect-ratio: 9 / 16; }
+.tile.h { aspect-ratio: 16 / 9; }
+.tag {
+  font-size: .78rem; font-weight: 600; color: var(--ink);
+  background: rgba(8, 12, 24, .72); border: 1px solid rgba(255, 255, 255, .14); border-radius: 999px; padding: 2px 10px;
+  backdrop-filter: blur(4px);
+}
+.wall .tag { position: absolute; inset-inline-start: 10px; bottom: 10px; }
+.tile figcaption { position: absolute; inset: auto 0 0 0; padding: 30px 12px 10px; background: linear-gradient(to top, rgba(6, 9, 18, .9), rgba(6, 9, 18, 0)); display: grid; gap: 4px; justify-items: start; }
+.tile figcaption .t { font-family: var(--font-display); font-weight: 700; font-size: .95rem; line-height: 1.4; }
+
+.wall { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-top: 40px; }
+.feature { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 1fr); gap: 12px; margin-bottom: 12px; }
+.feature .tile.v { aspect-ratio: auto; height: 100%; }
+.grid4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+
+/* clients */
+.clients { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 34px; padding-block: 26px; border-block: 1px solid var(--line); margin-top: 44px; }
+.clients .lbl { color: var(--muted); font-size: .9rem; }
+.clients .c { font-family: var(--font-display); font-weight: 700; direction: ltr; unicode-bidi: isolate; letter-spacing: .14em; font-size: 1rem; }
+
+/* sections */
+.sec { padding-block: 64px; border-bottom: 1px solid var(--line); scroll-margin-top: 64px; }
+.sec-head { display: grid; gap: 4px; margin-bottom: 26px; max-width: 760px; }
+.eyebrow { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .08em; color: var(--gold); margin: 0; }
+.sec-head h2 { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.7rem, 4.4vw, 2.6rem); line-height: 1.3; margin: 0; text-wrap: balance; }
+.sec-head p { margin: 8px 0 0; font-size: 1.04rem; }
+.did { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 18px 0 0; }
+.did li { border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 3px 12px; font-size: .88rem; }
+
+/* agencies */
+.points { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.points li { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px; min-width: 0; }
+.points h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.08rem; margin: 0 0 2px; color: var(--gold); }
+.points p { margin: 0; font-size: .93rem; color: var(--muted); }
+
+/* process + services */
+.steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; counter-reset: step; }
+.steps li { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px; counter-increment: step; min-width: 0; }
+.steps li::before { content: counter(step, decimal-leading-zero); display: block; font-family: var(--font-mono); font-size: .8rem; color: var(--gold); margin-bottom: 4px; direction: ltr; text-align: start; }
+.steps h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.08rem; margin: 0 0 2px; }
+.steps p { margin: 0; font-size: .93rem; color: var(--muted); }
+.services { list-style: none; padding: 0; margin: 28px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.services li { padding: 16px 0; border-bottom: 1px solid var(--line); display: grid; padding-inline-end: 16px; }
+.services b { font-family: var(--font-display); font-weight: 700; font-size: 1.12rem; }
+
+/* contact */
+.contact { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 32px; align-items: start; }
+.contact h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2rem, 5.5vw, 3.2rem); line-height: 1.2; margin: 0 0 10px; text-wrap: balance; }
+.contact-lines { display: grid; gap: 10px; }
+.contact-lines a { display: block; border: 1px solid var(--line); background: var(--panel); border-radius: 12px; padding: 12px 14px; color: var(--ink); text-decoration: none; }
+.contact-lines a:hover { border-color: var(--gold); }
+.contact-lines span { display: block; font-size: .8rem; color: var(--muted); }
+.contact-lines bdi { font-weight: 600; font-size: 1.05rem; }
+.reply { margin: 4px 0 0; color: var(--muted); font-size: .92rem; }
+footer { padding-block: 26px 44px; color: var(--muted); font-size: .88rem; }
+
+@media (max-width: 900px) {
+  .nav a.opt { display: none; }
+  .steps, .services, .points { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .contact { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .wall, .grid4, .grid3 { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
+  .wall .tile, .grid4 .tile, .grid3 .tile { flex: 0 0 46%; scroll-snap-align: start; }
+  .feature { grid-template-columns: 1fr; }
+  .feature .tile.v { display: none; }
+}
+@media (max-width: 480px) {
+  .wall .tile, .grid4 .tile, .grid3 .tile { flex-basis: 64%; }
+  .steps, .services, .points { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<div dir="rtl" lang="ar">
+
+<div class="bar">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Steps Marketing"><span class="w">Steps</span><span class="s">Marketing</span></a>
+    <nav class="nav" aria-label="أقسام الصفحة">
+      <a href="#work">الأعمال</a>
+      <a class="opt" href="#agencies">للوكالات</a>
+      <a class="opt" href="#how">كيف نعمل</a>
+      <a href="#contact">تواصل</a>
+      <a class="lang" href="en.html" lang="en" hreflang="en">English</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero wrap" id="top">
+  <h1>ورا كل بيزنس<span class="dots">…</span><br>حكاية.</h1>
+  <div class="hero-row">
+    <div>
+      <p class="lede">استوديو إنتاج محتوى من القاهرة. فريق من 6 يصنع الفيديو والموشن والأنيميشن بالعربية واللهجة السعودية والإنجليزية، ويبدأ دائمًا من الحكاية التي تشدّ جمهورك.</p>
+      <div class="en" style="margin-top:6px">Behind every business, a story. A content production studio from Cairo, working in Arabic, Saudi dialect and English.</div>
+    </div>
+    <div class="cta">
+      <a class="primary" href="#work">شاهد الأعمال</a>
+      <a href="#contact">ابدأ معنا</a>
+    </div>
+  </div>
+
+  <div class="wall" aria-label="مقتطفات من الأعمال">
+    <figure class="tile v"><video src="media/nx-night.mp4" autoplay muted loop playsinline preload="auto" aria-label="نوفوكس: الرياض ما تنام"></video><span class="tag">باللهجة السعودية</span></figure>
+    <figure class="tile v"><video src="media/gez-shoot.mp4" autoplay muted loop playsinline preload="auto" aria-label="جز: ريلز التصوير"></video><span class="tag">تصوير + جرافيك</span></figure>
+    <figure class="tile v"><video src="media/shahrazad.mp4" autoplay muted loop playsinline preload="auto" aria-label="حكاوي: شهرزاد"></video><span class="tag">رسوم مسطحة</span></figure>
+    <figure class="tile v"><video src="media/gez-teaser.mp4" autoplay muted loop playsinline preload="auto" aria-label="عدّاد إطلاق أغنية جز"></video><span class="tag">عدّاد إطلاق</span></figure>
+    <figure class="tile v"><video src="media/chocolate.mp4" autoplay muted loop playsinline preload="auto" aria-label="A ولا B: الشوكولاتة"></video><span class="tag">أنيميشن 3D</span></figure>
+  </div>
+
+  <div class="clients">
+    <span class="lbl">عملنا مع</span>
+    <span class="c">FAHD FARES</span>
+    <span class="c">NOVOX</span>
+    <span class="c">BEGONIA</span>
+  </div>
+</header>
+
+<main id="work">
+
+<section class="sec wrap" id="novox">
+  <div class="sec-head">
+    <p class="eyebrow">NOVOX · نوفوكس</p>
+    <h2>منتج تقني يُفهم في ثوانٍ، بأكثر من لهجة.</h2>
+    <p>نوفوكس مساعد صوتي يرد على مكالمات العملاء. صنعنا له فيديوهات منتج بأساليب مختلفة، منها سلسلة للسوق السعودي بلهجته.</p>
+  </div>
+  <div class="grid4">
+    <figure class="tile v"><video src="media/nx-night.mp4" autoplay muted loop playsinline preload="metadata" aria-label="الرياض ما تنام"></video><figcaption><span class="t">«الرياض ما تنام»</span><span class="tag">باللهجة السعودية</span></figcaption></figure>
+    <figure class="tile v"><video src="media/nx-onecall.mp4" autoplay muted loop playsinline preload="metadata" aria-label="مكالمة واحدة"></video><figcaption><span class="t">«مكالمة واحدة»</span><span class="tag">كلام متحرك</span></figcaption></figure>
+    <figure class="tile v"><video src="media/nx-ailies.mp4" autoplay muted loop playsinline preload="metadata" aria-label="من الآخر"></video><figcaption><span class="t">«من الآخر»</span><span class="tag">رسوم مسطحة</span></figcaption></figure>
+    <figure class="tile v"><video src="media/nx-asknovox.mp4" autoplay muted loop playsinline preload="metadata" aria-label="اسأل نوفوكس"></video><figcaption><span class="t">«اسأل نوفوكس»</span><span class="tag">مذيعة 3D</span></figcaption></figure>
+  </div>
+  <ul class="did">
+    <li>فيديوهات منتج</li><li>نصوص باللهجة السعودية</li><li>4 أساليب بصرية</li>
+  </ul>
+</section>
+
+<section class="sec wrap" id="fahd">
+  <div class="sec-head">
+    <p class="eyebrow">فهد فارس · FAHD FARES</p>
+    <h2>حملة إطلاق أغنية «جز»، من أول عدّاد إلى آخر فيديو.</h2>
+    <p>فيديو رسمي بأسلوب الموشن كوميك، وعدّاد إطلاق حتى 11:11، وريلز تصوير بالجرافيك، وفيديوهات قبل النزول.</p>
+  </div>
+  <div class="feature">
+    <figure class="tile h"><video src="media/gez-comic.mp4" autoplay muted loop playsinline preload="metadata" aria-label="جز: الفيديو الرسمي"></video><figcaption><span class="t">«جز»: الفيديو الرسمي</span><span class="tag">موشن كوميك</span></figcaption></figure>
+    <figure class="tile v"><video src="media/gez-shoot.mp4" autoplay muted loop playsinline preload="metadata" aria-label="جز: ريلز التصوير"></video><figcaption><span class="t">«جز»: ريلز التصوير</span><span class="tag">تصوير + جرافيك</span></figcaption></figure>
+  </div>
+  <ul class="did">
+    <li>فيديو رسمي</li><li>موشن كوميك</li><li>عدّاد إطلاق</li><li>ريلز تصوير</li><li>فيديوهات قبل النزول</li>
+  </ul>
+</section>
+
+<section class="sec wrap" id="series">
+  <div class="sec-head">
+    <p class="eyebrow">صفحة STEPS</p>
+    <h2>سلاسل حكايات نجرّبها على صفحتنا أولًا.</h2>
+    <p>«حكاوي» و«المعضلة» و«A ولا B؟»: حكاية من التاريخ أو سؤال من يوم الناس، ودرس لصاحب البيزنس في جملة واحدة. كل سلسلة بأسلوب بصري خاص بها.</p>
+  </div>
+  <div class="grid3">
+    <figure class="tile v"><video src="media/baron.mp4" autoplay muted loop playsinline preload="metadata" aria-label="حكاوي: البارون"></video><figcaption><span class="t">حكاوي: البارون</span><span class="tag">رسوم مسطحة</span></figcaption></figure>
+    <figure class="tile v"><video src="media/flinch.mp4" autoplay muted loop playsinline preload="metadata" aria-label="إديسون والرقم"></video><figcaption><span class="t">إديسون والرقم</span><span class="tag">رسوم مسطحة</span></figcaption></figure>
+    <figure class="tile v"><video src="media/theseus.mp4" autoplay muted loop playsinline preload="metadata" aria-label="المعضلة: سفينة ثيسيوس"></video><figcaption><span class="t">المعضلة: سفينة ثيسيوس</span><span class="tag">رسوم كلاسيكية</span></figcaption></figure>
+    <figure class="tile v"><video src="media/monalisa.mp4" autoplay muted loop playsinline preload="metadata" aria-label="الموناليزا"></video><figcaption><span class="t">الموناليزا</span><span class="tag">أرشيف وثائقي</span></figcaption></figure>
+    <figure class="tile v"><video src="media/planes.mp4" autoplay muted loop playsinline preload="metadata" aria-label="الطيارات اللي رجعت"></video><figcaption><span class="t">الطيارات اللي رجعت</span><span class="tag">أرشيف + جرافيك</span></figcaption></figure>
+    <figure class="tile v"><video src="media/whitefriday.mp4" autoplay muted loop playsinline preload="metadata" aria-label="الجمعة البيضا"></video><figcaption><span class="t">الجمعة البيضا</span><span class="tag">مونتاج وثائقي</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="sec wrap" id="real">
+  <div class="sec-head">
+    <p class="eyebrow">إعلانات وتصوير</p>
+    <h2>إعلانات تسأل سؤالًا واحدًا، وتصوير من قلب الموقع.</h2>
+    <p>إعلاناتنا لأصحاب العيادات والمطاعم، وفيديو بتصوير حقيقي ونصوص متحركة لوسيط عقاري.</p>
+  </div>
+  <div class="grid3">
+    <figure class="tile v"><video src="media/begonia.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Begonia: فيديو عقاري"></video><figcaption><span class="t">Begonia</span><span class="tag">عقارات</span></figcaption></figure>
+    <figure class="tile v"><video src="media/ad-clinic.mp4" autoplay muted loop playsinline preload="metadata" aria-label="إعلان للعيادات"></video><figcaption><span class="t">«صفحة عيادتك… شبه كل العيادات؟»</span><span class="tag">إعلان مباشر</span></figcaption></figure>
+    <figure class="tile v"><video src="media/ad-resto.mp4" autoplay muted loop playsinline preload="metadata" aria-label="إعلان للمطاعم"></video><figcaption><span class="t">«صفحة مطعمك… شبه كل المطاعم؟»</span><span class="tag">إعلان مباشر</span></figcaption></figure>
+  </div>
+</section>
+
+<section class="sec wrap" id="agencies">
+  <div class="sec-head">
+    <p class="eyebrow">للوكالات · FOR AGENCIES</p>
+    <h2>فريق إنتاج إضافي لوكالتك، يعمل باسمك.</h2>
+    <p>عندما يزيد الطلب على طاقة فريقك، ننتج نحن من الخلف، ويصل كل شيء لعميلك باسم وكالتك.</p>
+  </div>
+  <ul class="points">
+    <li><h3>باسم وكالتك</h3><p>لا يظهر اسمنا في أي ملف، ولا نتواصل مع عميلك إلا إذا طلبت ذلك.</p></li>
+    <li><h3>سرية كاملة</h3><p>نوقّع اتفاقية عدم إفصاح قبل أن نستلم أي ملف.</p></li>
+    <li><h3>أول نسخة خلال 3 أيام عمل</h3><p>لريل حتى 30 ثانية، من السكريبت المعتمد إلى أول نسخة كاملة.</p></li>
+    <li><h3>باللهجة السعودية</h3><p>كتابة وتعليق صوتي باللهجة السعودية، وبالفصحى والإنجليزية.</p></li>
+    <li><h3>كل المقاسات</h3><p>9:16 و1:1 و16:9 في نفس التسليم، جاهزة لكل منصة.</p></li>
+    <li><h3>توقيت قريب منك</h3><p>نعمل من القاهرة بفارق ساعتين على الأكثر عن الرياض ودبي، ونرد خلال يوم عمل.</p></li>
+  </ul>
+</section>
+
+<section class="sec wrap" id="how">
+  <div class="sec-head">
+    <p class="eyebrow">HOW WE WORK</p>
+    <h2>كيف نعمل</h2>
+  </div>
+  <ol class="steps">
+    <li><h3>نجد الحكاية</h3><p>نفهم نشاطك وجمهورك، ونختار الحكاية التي تجعلهم يكملون.</p></li>
+    <li><h3>3 بدايات لكل سكريبت</h3><p>الثواني الثلاث الأولى تحسم كل شيء، فنكتب 3 افتتاحيات وأنت تختار.</p></li>
+    <li><h3>عيّنة قبل أي شكل جديد</h3><p>عيّنة قصيرة أو صور ثابتة قبل التحريك، حتى لا تدفع ثمن شيء لا يشبهك.</p></li>
+    <li><h3>الإنتاج</h3><p>تصميم وموشن ومونتاج وأنيميشن، بالعربية والإنجليزية.</p></li>
+    <li><h3>فحص نهائي ثابت</h3><p>الصوت مطابق للنص، ولا كادر أسود، والمقاسات مضبوطة لكل منصة.</p></li>
+    <li><h3>تقرير كل أسبوع</h3><p>ما الذي نجح، وتغيير واحد للأسبوع القادم.</p></li>
+  </ol>
+  <ul class="services">
+    <li><b>حكايات وريلز</b><span class="en">Story reels</span></li>
+    <li><b>موشن جرافيك</b><span class="en">Motion graphics</span></li>
+    <li><b>أنيميشن وكليبات</b><span class="en">Animation &amp; music videos</span></li>
+    <li><b>سكريبت وتعليق صوتي باللهجة السعودية</b><span class="en">Saudi-dialect scripts &amp; voiceover</span></li>
+    <li><b>حملات إطلاق</b><span class="en">Launch campaigns</span></li>
+    <li><b>خطط محتوى وتحليل منافسين</b><span class="en">Strategy &amp; competitor analysis</span></li>
+  </ul>
+</section>
+
+</main>
+
+<section class="sec wrap" id="contact">
+  <div class="contact">
+    <div>
+      <h2>عندك حكاية؟ نحكيها معك.</h2>
+      <p>ابدأ بمكالمة 20 دقيقة: نسمع عن نشاطك، ونرسل لك فكرة أولى قبل أي التزام.</p>
+      <div class="en">Start with a 20-minute call. We send a first idea before any commitment.</div>
+    </div>
+    <div class="contact-lines">
+      <a href="https://wa.me/201055772172" target="_blank" rel="noopener"><span>واتساب</span><bdi dir="ltr">+20 10 5577 2172</bdi></a>
+      <a href="mailto:ahmed@steps-marketing.net"><span>الإيميل</span><bdi dir="ltr">ahmed@steps-marketing.net</bdi></a>
+      <a href="https://steps-marketing.net" target="_blank" rel="noopener"><span>الموقع</span><bdi dir="ltr">steps-marketing.net</bdi></a>
+      <p class="reply">نرد خلال يوم عمل واحد.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">Steps Marketing · القاهرة · العربية واللهجة السعودية والإنجليزية</footer>
+
+</div>
+
+<script>
+(function () {
+  try {
+    var lead = new URLSearchParams(window.location.search).get('lead');
+    var sec = lead && document.getElementById(lead);
+    var main = document.getElementById('work');
+    if (sec && main && sec.parentNode === main) main.insertBefore(sec, main.firstElementChild);
+  } catch (e) {}
+})();
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var vids = Array.prototype.slice.call(document.querySelectorAll('video'));
+  if (reduce) {
+    vids.forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); v.setAttribute('controls', ''); });
+    return;
+  }
+  if (!('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      var v = e.target;
+      if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+      else { v.pause(); }
+    });
+  }, { rootMargin: '120px 0px' });
+  vids.forEach(function (v) { io.observe(v); });
+})();
+</script>
+</body>
+</html>
