@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>أعمالنا | Steps Marketing</title>
 <meta name="description" content="أعمال Steps Marketing: فيديو وموشن وأنيميشن بالعربية واللهجة السعودية والإنجليزية، وفريق إنتاج إضافي للوكالات.">
-<meta name="theme-color" content="#0B1020">
+<meta name="theme-color" content="#011631">
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="canonical" href="https://steps-marketing.net/work/">
 <link rel="alternate" hreflang="ar" href="https://steps-marketing.net/work/">
@@ -21,72 +21,69 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@500;700;800;900&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=Alexandria:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <style>
-/* Layout: a reel-first studio page in Steps' navy and gold, pitched at Gulf clients. The work moves on screen before any text: a wall of vertical loops under the tagline, then cases as video grids with one short paragraph each, Saudi-dialect work first. Deliberately single dark theme, matching the Steps brand cover. A ?lead=<section id> link moves one section to the top, so each segment can get its own entry point. */
+/* Layout: the portfolio page dressed in steps-marketing.net's own system, so moving between the two feels like one site: the same navy ground, gold thread lines, grain, logo bar, Alexandria + IBM Plex Sans Arabic type, pill buttons, numbered section heads and outlined step numbers. The work still moves before any text. A ?lead=<section id> link moves one section to the top; section numbers follow the order on screen. */
 :root {
-  --bg: #0B1020;
-  --panel: #121A2F;
-  --ink: #F4EFE4;
-  --muted: #A1A8BA;
-  --line: #222C46;
-  --gold: #D4AF5F;
-  --gold-ink: #1A1408;
-  --font-display: "Alexandria", "IBM Plex Sans Arabic", "Segoe UI", Tahoma, sans-serif;
-  --font-body: "IBM Plex Sans Arabic", "Segoe UI", Tahoma, sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  --bg: #011631; --panel: #0a2347; --panel-2: #0f2b55;
+  --ink: #f3efe6; --soft: rgba(243, 239, 230, .72); --mute: rgba(243, 239, 230, .5);
+  --navy: #011631; --gold: #d3b273; --gold-light: #e6cb96;
+  --line: rgba(211, 178, 115, .22); --line-strong: rgba(211, 178, 115, .45);
+  --f-display: 'Alexandria', 'Noto Kufi Arabic', 'Segoe UI', Tahoma, sans-serif;
+  --f-body: 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, sans-serif;
+  --f-latin-display: 'Archivo', 'Inter Tight', 'Segoe UI', system-ui, sans-serif;
+  --f-latin: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --ease: cubic-bezier(.16, 1, .3, 1);
   color-scheme: dark;
 }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.75; }
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
-.wrap {
-  max-width: 1180px; margin-inline: auto;
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-}
-a { color: var(--gold); text-underline-offset: 3px; }
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-padding-top: 88px; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 16px/1.7 var(--f-body); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); background: var(--bg); z-index: 60; }
+body::after { content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: .07; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>"); }
+.wrap { max-width: 1360px; margin-inline: auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+@media (min-width: 900px) { .wrap { padding-left: max(48px, env(safe-area-inset-left, 0px)); padding-right: max(48px, env(safe-area-inset-right, 0px)); } }
+a { color: inherit; text-decoration: none; }
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
-.en { direction: ltr; unicode-bidi: isolate; color: var(--muted); font-size: .9rem; }
+.en { direction: ltr; unicode-bidi: isolate; font-family: var(--f-latin); color: var(--mute); font-size: .9rem; }
 
-/* top bar */
-.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
-.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
-.mark { display: inline-flex; align-items: baseline; gap: 6px; direction: ltr; text-decoration: none; color: var(--ink); }
-.mark .w { font-family: var(--font-display); font-weight: 900; font-size: 1.5rem; letter-spacing: -.03em; }
-.mark .s { font-family: var(--font-display); font-weight: 500; font-size: .72rem; color: var(--muted); }
-.nav { display: flex; align-items: center; gap: 18px; font-size: .92rem; }
-.nav a { color: var(--ink); text-decoration: none; }
-.nav a:hover { color: var(--gold); }
-.nav a.lang { font-family: var(--font-display); font-size: .78rem; color: var(--gold); border: 1px solid var(--gold); border-radius: 999px; padding: 1px 11px; }
-.nav a.lang:hover { background: var(--gold); color: var(--gold-ink); }
+/* top bar: same as the main site's nav */
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: rgba(1, 22, 49, .84); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px; }
+.brand img { height: 30px; width: auto; display: block; }
+.nav { display: flex; align-items: center; gap: 24px; }
+.nav a { font: 500 14px/1 var(--f-body); color: var(--soft); padding: 8px 0; position: relative; transition: color .3s; }
+.nav a:hover { color: var(--ink); }
+.nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 2px; height: 1px; background: var(--gold); transform: scaleX(0); transform-origin: right; transition: transform .35s var(--ease); }
+.nav a:hover::after { transform: scaleX(1); }
+.nav a.lang { font: 500 13px/1 var(--f-latin); color: var(--ink); border: 1px solid var(--line-strong); border-radius: 999px; padding: 11px 14px; }
+.nav a.lang::after { display: none; }
+.nav a.lang:hover { border-color: var(--gold); color: var(--gold); }
 
 /* hero */
-.hero { padding-block: 64px 28px; }
-.hero h1 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2.8rem, 9vw, 6.4rem); line-height: 1.08; margin: 0; text-wrap: balance; }
-.hero h1 .dots { color: var(--gold); }
-.hero-row { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 20px 40px; margin-top: 18px; }
-.hero .lede { max-width: 52ch; font-size: 1.12rem; margin: 0; }
+.hero { position: relative; z-index: 2; padding-block: clamp(48px, 7vw, 96px) 28px; }
+.hero h1 { font-family: var(--f-display); font-weight: 700; font-size: clamp(2.2rem, 6.4vw, 5.4rem); line-height: 1.18; margin: 0; color: var(--ink); text-wrap: balance; }
+.hero h1 .gold { color: var(--gold); }
+.hero-row { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 20px 40px; margin-top: 22px; }
+.hero .lede { max-width: 56ch; font-size: 1.1rem; line-height: 1.7; color: var(--soft); margin: 0; }
 .cta { display: flex; flex-wrap: wrap; gap: 10px; }
-.cta a { text-decoration: none; font-weight: 600; padding: 10px 20px; border-radius: 999px; border: 1px solid var(--gold); white-space: nowrap; }
-.cta a.primary { background: var(--gold); color: var(--gold-ink); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 12px; font: 600 14.5px/1 var(--f-body); padding: 18px 26px; border-radius: 999px; border: 1px solid var(--gold); background: var(--gold); color: var(--navy); white-space: nowrap; transition: transform .35s var(--ease), background .35s, color .35s, border-color .35s; }
+.btn:hover { transform: translateY(-2px); background: var(--gold-light); border-color: var(--gold-light); }
+.btn-line { background: transparent; color: var(--gold); }
+.btn-line:hover { background: var(--gold); color: var(--navy); }
 
 /* tiles */
 .tile { position: relative; margin: 0; border-radius: 16px; overflow: hidden; background: var(--panel); border: 1px solid var(--line); min-width: 0; }
 .tile video { display: block; width: 100%; height: 100%; object-fit: cover; }
 .tile.v { aspect-ratio: 9 / 16; }
 .tile.h { aspect-ratio: 16 / 9; }
-.tag {
-  font-size: .78rem; font-weight: 600; color: var(--ink);
-  background: rgba(8, 12, 24, .72); border: 1px solid rgba(255, 255, 255, .14); border-radius: 999px; padding: 2px 10px;
-  backdrop-filter: blur(4px);
-}
+.tag { font: 600 12px/1.6 var(--f-body); color: var(--ink); background: rgba(1, 10, 28, .72); border: 1px solid rgba(243, 239, 230, .14); border-radius: 999px; padding: 1px 10px; backdrop-filter: blur(4px); }
 .wall .tag { position: absolute; inset-inline-start: 10px; bottom: 10px; }
-.tile figcaption { position: absolute; inset: auto 0 0 0; padding: 30px 12px 10px; background: linear-gradient(to top, rgba(6, 9, 18, .9), rgba(6, 9, 18, 0)); display: grid; gap: 4px; justify-items: start; }
-.tile figcaption .t { font-family: var(--font-display); font-weight: 700; font-size: .95rem; line-height: 1.4; }
+.tile figcaption { position: absolute; inset: auto 0 0 0; padding: 30px 12px 10px; background: linear-gradient(to top, rgba(0, 10, 28, .9), rgba(0, 10, 28, 0)); display: grid; gap: 4px; justify-items: start; }
+.tile figcaption .t { font-family: var(--f-display); font-weight: 600; font-size: .95rem; line-height: 1.4; }
 
-.wall { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-top: 40px; }
+.wall { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-top: 44px; }
 .feature { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 1fr); gap: 12px; margin-bottom: 12px; }
 .feature .tile.v { aspect-ratio: auto; height: 100%; }
 .grid4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
@@ -94,44 +91,50 @@ a { color: var(--gold); text-underline-offset: 3px; }
 
 /* clients */
 .clients { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 34px; padding-block: 26px; border-block: 1px solid var(--line); margin-top: 44px; }
-.clients .lbl { color: var(--muted); font-size: .9rem; }
-.clients .c { font-family: var(--font-display); font-weight: 700; direction: ltr; unicode-bidi: isolate; letter-spacing: .14em; font-size: 1rem; }
+.clients .lbl { color: var(--mute); font-size: .95rem; }
+.clients .c { font-family: var(--f-latin-display); font-weight: 600; font-variation-settings: 'wdth' 112; direction: ltr; unicode-bidi: isolate; letter-spacing: .14em; font-size: 1rem; }
 
-/* sections */
-.sec { padding-block: 64px; border-bottom: 1px solid var(--line); scroll-margin-top: 64px; }
-.sec-head { display: grid; gap: 4px; margin-bottom: 26px; max-width: 760px; }
-.eyebrow { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .08em; color: var(--gold); margin: 0; }
-.sec-head h2 { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.7rem, 4.4vw, 2.6rem); line-height: 1.3; margin: 0; text-wrap: balance; }
-.sec-head p { margin: 8px 0 0; font-size: 1.04rem; }
+/* sections: numbered heads like the main site */
+main { counter-reset: sec; position: relative; z-index: 2; }
+.sec { position: relative; z-index: 2; padding-block: clamp(56px, 7vw, 96px); border-bottom: 1px solid var(--line); scroll-margin-top: 72px; }
+main > .sec { counter-increment: sec; }
+.sec-top { display: flex; align-items: center; gap: 14px; padding-bottom: 18px; border-bottom: 1px solid var(--line); margin-bottom: 28px; }
+.idx { font-family: var(--f-latin-display); font-weight: 600; font-size: 12px; letter-spacing: .06em; color: var(--ink); border: 1px solid var(--line-strong); padding: 7px 10px; border-radius: 999px; line-height: 1; direction: ltr; font-variant-numeric: tabular-nums; }
+main > .sec .idx::before { content: counter(sec, decimal-leading-zero); }
+.sec-k { font: 500 13.5px/1.2 var(--f-body); color: var(--gold); }
+.sec-head { display: grid; gap: 4px; margin-bottom: 26px; max-width: 780px; }
+.sec-head h2 { font-family: var(--f-display); font-weight: 700; font-size: clamp(1.6rem, 3.2vw, 2.8rem); line-height: 1.3; margin: 0; color: var(--ink); text-wrap: balance; }
+.sec-head p { margin: 10px 0 0; font-size: 1.05rem; line-height: 1.75; color: var(--soft); }
 .did { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 18px 0 0; }
-.did li { border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 3px 12px; font-size: .88rem; }
+.did li { border: 1px solid var(--line); background: var(--panel); color: var(--soft); border-radius: 999px; padding: 3px 12px; font-size: .9rem; }
 
 /* agencies */
 .points { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-.points li { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px; min-width: 0; }
-.points h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.08rem; margin: 0 0 2px; color: var(--gold); }
-.points p { margin: 0; font-size: .93rem; color: var(--muted); }
+.points li { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 20px; min-width: 0; }
+.points h3 { font-family: var(--f-display); font-weight: 600; font-size: 1.1rem; margin: 0 0 6px; color: var(--gold); }
+.points p { margin: 0; font-size: .95rem; color: var(--soft); }
 
-/* process + services */
+/* process + services: outlined numbers like the main site */
 .steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; counter-reset: step; }
-.steps li { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px; counter-increment: step; min-width: 0; }
-.steps li::before { content: counter(step, decimal-leading-zero); display: block; font-family: var(--font-mono); font-size: .8rem; color: var(--gold); margin-bottom: 4px; direction: ltr; text-align: start; }
-.steps h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.08rem; margin: 0 0 2px; }
-.steps p { margin: 0; font-size: .93rem; color: var(--muted); }
+.steps li { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 20px; counter-increment: step; min-width: 0; }
+.steps li::before { content: counter(step, decimal-leading-zero); display: block; font-family: var(--f-latin-display); font-weight: 600; font-variation-settings: 'wdth' 112; font-size: 2.6rem; line-height: 1; letter-spacing: -.04em; color: transparent; -webkit-text-stroke: 1px var(--gold); margin-bottom: 12px; direction: ltr; text-align: start; }
+.steps h3 { font-family: var(--f-display); font-weight: 600; font-size: 1.15rem; margin: 0 0 4px; }
+.steps p { margin: 0; font-size: .95rem; color: var(--soft); }
 .services { list-style: none; padding: 0; margin: 28px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); }
 .services li { padding: 16px 0; border-bottom: 1px solid var(--line); display: grid; padding-inline-end: 16px; }
-.services b { font-family: var(--font-display); font-weight: 700; font-size: 1.12rem; }
+.services b { font-family: var(--f-display); font-weight: 600; font-size: 1.12rem; }
 
 /* contact */
 .contact { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 32px; align-items: start; }
-.contact h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2rem, 5.5vw, 3.2rem); line-height: 1.2; margin: 0 0 10px; text-wrap: balance; }
+.contact h2 { font-family: var(--f-display); font-weight: 700; font-size: clamp(2rem, 5.4vw, 3.6rem); line-height: 1.25; margin: 0 0 12px; color: var(--gold); text-wrap: balance; }
+.contact p { margin: 0; color: var(--soft); }
 .contact-lines { display: grid; gap: 10px; }
-.contact-lines a { display: block; border: 1px solid var(--line); background: var(--panel); border-radius: 12px; padding: 12px 14px; color: var(--ink); text-decoration: none; }
+.contact-lines a { display: block; border: 1px solid var(--line); background: var(--panel); border-radius: 12px; padding: 12px 14px; color: var(--ink); transition: border-color .3s; }
 .contact-lines a:hover { border-color: var(--gold); }
-.contact-lines span { display: block; font-size: .8rem; color: var(--muted); }
-.contact-lines bdi { font-weight: 600; font-size: 1.05rem; }
-.reply { margin: 4px 0 0; color: var(--muted); font-size: .92rem; }
-footer { padding-block: 26px 44px; color: var(--muted); font-size: .88rem; }
+.contact-lines span { display: block; font-size: .82rem; color: var(--mute); }
+.contact-lines bdi { font-family: var(--f-latin); font-weight: 600; font-size: 1.02rem; }
+.reply { margin: 4px 0 0; color: var(--mute); font-size: .92rem; }
+footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--mute); font-size: .9rem; }
 
 @media (max-width: 900px) {
   .nav a.opt { display: none; }
@@ -145,10 +148,10 @@ footer { padding-block: 26px 44px; color: var(--muted); font-size: .88rem; }
   .feature .tile.v { display: none; }
 }
 @media (max-width: 480px) {
+  .nav { gap: 16px; }
   .wall .tile, .grid4 .tile, .grid3 .tile { flex-basis: 64%; }
   .steps, .services, .points { grid-template-columns: 1fr; }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
 </head>
 <body>
@@ -156,7 +159,7 @@ footer { padding-block: 26px 44px; color: var(--muted); font-size: .88rem; }
 
 <div class="bar">
   <div class="wrap">
-    <a class="mark" href="/#ar" aria-label="Steps Marketing"><span class="w">Steps</span><span class="s">Marketing</span></a>
+    <a class="brand" href="/#ar" aria-label="Steps Marketing"><img src="logo-white.png" alt="Steps Marketing"></a>
     <nav class="nav" aria-label="أقسام الصفحة">
       <a href="/#ar">الرئيسية</a>
       <a href="#work">الأعمال</a>
@@ -169,15 +172,15 @@ footer { padding-block: 26px 44px; color: var(--muted); font-size: .88rem; }
 </div>
 
 <header class="hero wrap" id="top">
-  <h1>ورا كل بيزنس<span class="dots">…</span><br>حكاية.</h1>
+  <h1>ورا كل بيزنس…<br><span class="gold">حكاية.</span></h1>
   <div class="hero-row">
     <div>
       <p class="lede">استوديو إنتاج محتوى من القاهرة. فريق من 6 يصنع الفيديو والموشن والأنيميشن بالعربية واللهجة السعودية والإنجليزية، ويبدأ دائمًا من الحكاية التي تشدّ جمهورك.</p>
       <div class="en" style="margin-top:6px">Behind every business, a story. A content production studio from Cairo, working in Arabic, Saudi dialect and English.</div>
     </div>
     <div class="cta">
-      <a class="primary" href="#work">شاهد الأعمال</a>
-      <a href="#contact">ابدأ معنا</a>
+      <a class="btn" href="#work">شاهد الأعمال</a>
+      <a class="btn btn-line" href="#contact">ابدأ معنا</a>
     </div>
   </div>
 
@@ -200,8 +203,8 @@ footer { padding-block: 26px 44px; color: var(--muted); font-size: .88rem; }
 <main id="work">
 
 <section class="sec wrap" id="novox">
+  <div class="sec-top"><span class="idx"></span><span class="sec-k">NOVOX · نوفوكس</span></div>
   <div class="sec-head">
-    <p class="eyebrow">NOVOX · نوفوكس</p>
     <h2>منتج تقني يُفهم في ثوانٍ، بأكثر من لهجة.</h2>
     <p>نوفوكس مساعد صوتي يرد على مكالمات العملاء. صنعنا له فيديوهات منتج بأساليب مختلفة، منها سلسلة للسوق السعودي بلهجته.</p>
   </div>
@@ -217,8 +220,8 @@ footer { padding-block: 26px 44px; color: var(--muted); font-size: .88rem; }
 </section>
 
 <section class="sec wrap" id="fahd">
+  <div class="sec-top"><span class="idx"></span><span class="sec-k">فهد فارس · FAHD FARES</span></div>
   <div class="sec-head">
-    <p class="eyebrow">فهد فارس · FAHD FARES</p>
     <h2>حملة إطلاق أغنية «جز»، من أول عدّاد إلى آخر فيديو.</h2>
     <p>فيديو رسمي بأسلوب الموشن كوميك، وعدّاد إطلاق حتى 11:11، وريلز تصوير بالجرافيك، وفيديوهات قبل النزول.</p>
   </div>
@@ -232,8 +235,8 @@ footer { padding-block: 26px 44px; color: var(--muted); font-size: .88rem; }
 </section>
 
 <section class="sec wrap" id="series">
+  <div class="sec-top"><span class="idx"></span><span class="sec-k">صفحة STEPS</span></div>
   <div class="sec-head">
-    <p class="eyebrow">صفحة STEPS</p>
     <h2>سلاسل حكايات نجرّبها على صفحتنا أولًا.</h2>
     <p>«حكاوي» و«المعضلة» و«A ولا B؟»: حكاية من التاريخ أو سؤال من يوم الناس، ودرس لصاحب البيزنس في جملة واحدة. كل سلسلة بأسلوب بصري خاص بها.</p>
   </div>
@@ -248,8 +251,8 @@ footer { padding-block: 26px 44px; color: var(--muted); font-size: .88rem; }
 </section>
 
 <section class="sec wrap" id="real">
+  <div class="sec-top"><span class="idx"></span><span class="sec-k">إعلانات وتصوير</span></div>
   <div class="sec-head">
-    <p class="eyebrow">إعلانات وتصوير</p>
     <h2>إعلانات تسأل سؤالًا واحدًا، وتصوير من قلب الموقع.</h2>
     <p>إعلاناتنا لأصحاب العيادات والمطاعم، وفيديو بتصوير حقيقي ونصوص متحركة لوسيط عقاري.</p>
   </div>
@@ -261,8 +264,8 @@ footer { padding-block: 26px 44px; color: var(--muted); font-size: .88rem; }
 </section>
 
 <section class="sec wrap" id="agencies">
+  <div class="sec-top"><span class="idx"></span><span class="sec-k">للوكالات</span></div>
   <div class="sec-head">
-    <p class="eyebrow">للوكالات · FOR AGENCIES</p>
     <h2>فريق إنتاج إضافي لوكالتك، يعمل باسمك.</h2>
     <p>عندما يزيد الطلب على طاقة فريقك، ننتج نحن من الخلف، ويصل كل شيء لعميلك باسم وكالتك.</p>
   </div>
@@ -277,10 +280,7 @@ footer { padding-block: 26px 44px; color: var(--muted); font-size: .88rem; }
 </section>
 
 <section class="sec wrap" id="how">
-  <div class="sec-head">
-    <p class="eyebrow">HOW WE WORK</p>
-    <h2>كيف نعمل</h2>
-  </div>
+  <div class="sec-top"><span class="idx"></span><span class="sec-k">كيف نعمل</span></div>
   <ol class="steps">
     <li><h3>نجد الحكاية</h3><p>نفهم نشاطك وجمهورك، ونختار الحكاية التي تجعلهم يكملون.</p></li>
     <li><h3>3 بدايات لكل سكريبت</h3><p>الثواني الثلاث الأولى تحسم كل شيء، فنكتب 3 افتتاحيات وأنت تختار.</p></li>
@@ -306,7 +306,7 @@ footer { padding-block: 26px 44px; color: var(--muted); font-size: .88rem; }
     <div>
       <h2>عندك حكاية؟ نحكيها معك.</h2>
       <p>ابدأ بمكالمة 20 دقيقة: نسمع عن نشاطك، ونرسل لك فكرة أولى قبل أي التزام.</p>
-      <div class="en">Start with a 20-minute call. We send a first idea before any commitment.</div>
+      <div class="en" style="margin-top:6px">Start with a 20-minute call. We send a first idea before any commitment.</div>
     </div>
     <div class="contact-lines">
       <a href="https://wa.me/201055772172" target="_blank" rel="noopener"><span>واتساب</span><bdi dir="ltr">+20 10 5577 2172</bdi></a>

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Work | Steps Marketing</title>
 <meta name="description" content="Steps Marketing's work: video, motion and animation in Arabic, Saudi dialect and English, plus production under your name for agencies.">
-<meta name="theme-color" content="#0B1020">
+<meta name="theme-color" content="#011631">
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="canonical" href="https://steps-marketing.net/work/en.html">
 <link rel="alternate" hreflang="ar" href="https://steps-marketing.net/work/">
@@ -21,71 +21,69 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@500;700;800;900&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=Alexandria:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <style>
-/* English twin of the Arabic page: same reel-first layout, navy and gold, single dark theme. ?lead=<section id> moves one section to the top. */
+/* English twin of the Arabic page, in steps-marketing.net's own system: navy ground, gold thread lines, grain, logo bar, Archivo display + Inter body + Instrument Serif accents, pill buttons, numbered section heads and outlined step numbers. ?lead=<section id> moves one section to the top. */
 :root {
-  --bg: #0B1020;
-  --panel: #121A2F;
-  --ink: #F4EFE4;
-  --muted: #A1A8BA;
-  --line: #222C46;
-  --gold: #D4AF5F;
-  --gold-ink: #1A1408;
-  --font-display: "Alexandria", "Segoe UI", system-ui, sans-serif;
-  --font-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  --bg: #011631; --panel: #0a2347; --panel-2: #0f2b55;
+  --ink: #f3efe6; --soft: rgba(243, 239, 230, .72); --mute: rgba(243, 239, 230, .5);
+  --navy: #011631; --gold: #d3b273; --gold-light: #e6cb96;
+  --line: rgba(211, 178, 115, .22); --line-strong: rgba(211, 178, 115, .45);
+  --f-display: 'Archivo', 'Inter Tight', 'Segoe UI', system-ui, sans-serif;
+  --f-serif: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
+  --f-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --f-ar: 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, sans-serif;
+  --wdth: 'wdth' 112;
+  --ease: cubic-bezier(.16, 1, .3, 1);
   color-scheme: dark;
 }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.65; }
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
-.wrap {
-  max-width: 1180px; margin-inline: auto;
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-}
-a { color: var(--gold); text-underline-offset: 3px; }
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-padding-top: 88px; -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 16px/1.65 var(--f-body); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); background: var(--bg); z-index: 60; }
+body::after { content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: .07; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>"); }
+.wrap { max-width: 1360px; margin-inline: auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+@media (min-width: 900px) { .wrap { padding-left: max(48px, env(safe-area-inset-left, 0px)); padding-right: max(48px, env(safe-area-inset-right, 0px)); } }
+a { color: inherit; text-decoration: none; }
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
+.serif { font-family: var(--f-serif); font-style: italic; font-weight: 400; letter-spacing: -.01em; color: var(--gold); }
 
-/* top bar */
-.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
-.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
-.mark { display: inline-flex; align-items: baseline; gap: 6px; text-decoration: none; color: var(--ink); }
-.mark .w { font-family: var(--font-display); font-weight: 900; font-size: 1.5rem; letter-spacing: -.03em; }
-.mark .s { font-family: var(--font-display); font-weight: 500; font-size: .72rem; color: var(--muted); }
-.nav { display: flex; align-items: center; gap: 18px; font-size: .92rem; }
-.nav a { color: var(--ink); text-decoration: none; }
-.nav a:hover { color: var(--gold); }
-.nav a.lang { font-family: "IBM Plex Sans Arabic", var(--font-display); font-size: .82rem; color: var(--gold); border: 1px solid var(--gold); border-radius: 999px; padding: 1px 11px; }
-.nav a.lang:hover { background: var(--gold); color: var(--gold-ink); }
+/* top bar: same as the main site's nav */
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: rgba(1, 22, 49, .84); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px; }
+.brand img { height: 30px; width: auto; display: block; }
+.nav { display: flex; align-items: center; gap: 28px; }
+.nav a { font: 500 13px/1 var(--f-body); color: var(--soft); padding: 8px 0; position: relative; transition: color .3s; }
+.nav a:hover { color: var(--ink); }
+.nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 2px; height: 1px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform .35s var(--ease); }
+.nav a:hover::after { transform: scaleX(1); }
+.nav a.lang { font: 500 13px/1 var(--f-ar); color: var(--ink); border: 1px solid var(--line-strong); border-radius: 999px; padding: 11px 14px; }
+.nav a.lang::after { display: none; }
+.nav a.lang:hover { border-color: var(--gold); color: var(--gold); }
 
 /* hero */
-.hero { padding-block: 64px 28px; }
-.hero h1 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2.6rem, 8.4vw, 6rem); line-height: 1.04; letter-spacing: -.02em; margin: 0; text-wrap: balance; }
-.hero h1 .dots { color: var(--gold); }
-.hero-row { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 20px 40px; margin-top: 18px; }
-.hero .lede { max-width: 54ch; font-size: 1.12rem; margin: 0; }
+.hero { position: relative; z-index: 2; padding-block: clamp(48px, 7vw, 96px) 28px; }
+.hero h1 { font-family: var(--f-display); font-weight: 600; font-variation-settings: var(--wdth); font-size: clamp(2.4rem, 7vw, 6.4rem); line-height: .98; letter-spacing: -.035em; margin: 0; color: var(--ink); text-wrap: balance; }
+.hero-row { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 20px 40px; margin-top: 26px; }
+.hero .lede { max-width: 56ch; font-size: 1.08rem; line-height: 1.65; color: var(--soft); margin: 0; }
 .cta { display: flex; flex-wrap: wrap; gap: 10px; }
-.cta a { text-decoration: none; font-weight: 600; padding: 10px 20px; border-radius: 999px; border: 1px solid var(--gold); white-space: nowrap; }
-.cta a.primary { background: var(--gold); color: var(--gold-ink); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 12px; font: 600 13px/1 var(--f-body); letter-spacing: .04em; padding: 18px 26px; border-radius: 999px; border: 1px solid var(--gold); background: var(--gold); color: var(--navy); white-space: nowrap; transition: transform .35s var(--ease), background .35s, color .35s, border-color .35s; }
+.btn:hover { transform: translateY(-2px); background: var(--gold-light); border-color: var(--gold-light); }
+.btn-line { background: transparent; color: var(--gold); }
+.btn-line:hover { background: var(--gold); color: var(--navy); }
 
 /* tiles */
 .tile { position: relative; margin: 0; border-radius: 16px; overflow: hidden; background: var(--panel); border: 1px solid var(--line); min-width: 0; }
 .tile video { display: block; width: 100%; height: 100%; object-fit: cover; }
 .tile.v { aspect-ratio: 9 / 16; }
 .tile.h { aspect-ratio: 16 / 9; }
-.tag {
-  font-size: .76rem; font-weight: 600; color: var(--ink);
-  background: rgba(8, 12, 24, .72); border: 1px solid rgba(255, 255, 255, .14); border-radius: 999px; padding: 2px 10px;
-  backdrop-filter: blur(4px);
-}
+.tag { font: 600 11.5px/1.6 var(--f-body); color: var(--ink); background: rgba(1, 10, 28, .72); border: 1px solid rgba(243, 239, 230, .14); border-radius: 999px; padding: 1px 10px; backdrop-filter: blur(4px); }
 .wall .tag { position: absolute; inset-inline-start: 10px; bottom: 10px; }
-.tile figcaption { position: absolute; inset: auto 0 0 0; padding: 30px 12px 10px; background: linear-gradient(to top, rgba(6, 9, 18, .9), rgba(6, 9, 18, 0)); display: grid; gap: 4px; justify-items: start; }
-.tile figcaption .t { font-family: var(--font-display); font-weight: 700; font-size: .92rem; line-height: 1.35; }
+.tile figcaption { position: absolute; inset: auto 0 0 0; padding: 30px 12px 10px; background: linear-gradient(to top, rgba(0, 10, 28, .9), rgba(0, 10, 28, 0)); display: grid; gap: 4px; justify-items: start; }
+.tile figcaption .t { font-family: var(--f-display); font-weight: 600; font-variation-settings: var(--wdth); font-size: .92rem; letter-spacing: -.01em; line-height: 1.3; }
 
-.wall { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-top: 40px; }
+.wall { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-top: 44px; }
 .feature { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 1fr); gap: 12px; margin-bottom: 12px; }
 .feature .tile.v { aspect-ratio: auto; height: 100%; }
 .grid4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
@@ -93,43 +91,49 @@ a { color: var(--gold); text-underline-offset: 3px; }
 
 /* clients */
 .clients { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 34px; padding-block: 26px; border-block: 1px solid var(--line); margin-top: 44px; }
-.clients .lbl { color: var(--muted); font-size: .9rem; }
-.clients .c { font-family: var(--font-display); font-weight: 700; letter-spacing: .14em; font-size: 1rem; }
+.clients .lbl { font: 500 12px/1 var(--f-body); letter-spacing: .18em; text-transform: uppercase; color: var(--mute); }
+.clients .c { font-family: var(--f-display); font-weight: 600; font-variation-settings: var(--wdth); letter-spacing: .14em; font-size: 1rem; }
 
-/* sections */
-.sec { padding-block: 64px; border-bottom: 1px solid var(--line); scroll-margin-top: 64px; }
-.sec-head { display: grid; gap: 4px; margin-bottom: 26px; max-width: 760px; }
-.eyebrow { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .08em; color: var(--gold); margin: 0; }
-.sec-head h2 { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.6rem, 4.2vw, 2.5rem); line-height: 1.25; margin: 0; text-wrap: balance; }
-.sec-head p { margin: 8px 0 0; font-size: 1.04rem; }
+/* sections: numbered heads like the main site */
+main { counter-reset: sec; position: relative; z-index: 2; }
+.sec { position: relative; z-index: 2; padding-block: clamp(56px, 7vw, 96px); border-bottom: 1px solid var(--line); scroll-margin-top: 72px; }
+main > .sec { counter-increment: sec; }
+.sec-top { display: flex; align-items: center; gap: 18px; padding-bottom: 18px; border-bottom: 1px solid var(--line); margin-bottom: 28px; }
+.idx { font-family: var(--f-display); font-weight: 600; font-size: 12px; letter-spacing: .06em; color: var(--ink); border: 1px solid var(--line-strong); padding: 7px 10px; border-radius: 999px; line-height: 1; font-variant-numeric: tabular-nums; }
+main > .sec .idx::before { content: counter(sec, decimal-leading-zero); }
+.sec-k { font: 500 12px/1 var(--f-body); letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
+.sec-head { display: grid; gap: 4px; margin-bottom: 26px; max-width: 820px; }
+.sec-head h2 { font-family: var(--f-display); font-weight: 600; font-variation-settings: var(--wdth); font-size: clamp(1.8rem, 3.8vw, 3.2rem); line-height: 1.06; letter-spacing: -.025em; margin: 0; color: var(--ink); text-wrap: balance; }
+.sec-head p { margin: 12px 0 0; font-size: 1.04rem; line-height: 1.65; color: var(--soft); max-width: 62ch; }
 .did { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 18px 0 0; }
-.did li { border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 3px 12px; font-size: .88rem; }
+.did li { border: 1px solid var(--line); background: var(--panel); color: var(--soft); border-radius: 999px; padding: 3px 12px; font-size: .88rem; }
 
 /* agencies */
 .points { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-.points li { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px; min-width: 0; }
-.points h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; margin: 0 0 4px; color: var(--gold); }
-.points p { margin: 0; font-size: .93rem; color: var(--muted); }
+.points li { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 20px; min-width: 0; }
+.points h3 { font-family: var(--f-display); font-weight: 600; font-variation-settings: var(--wdth); font-size: 1.12rem; letter-spacing: -.01em; margin: 0 0 6px; color: var(--gold); }
+.points p { margin: 0; font-size: .94rem; color: var(--soft); }
 
-/* process + services */
+/* process + services: outlined numbers like the main site */
 .steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; counter-reset: step; }
-.steps li { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px; counter-increment: step; min-width: 0; }
-.steps li::before { content: counter(step, decimal-leading-zero); display: block; font-family: var(--font-mono); font-size: .8rem; color: var(--gold); margin-bottom: 4px; }
-.steps h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; margin: 0 0 4px; }
-.steps p { margin: 0; font-size: .93rem; color: var(--muted); }
+.steps li { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 20px; counter-increment: step; min-width: 0; }
+.steps li::before { content: counter(step, decimal-leading-zero); display: block; font-family: var(--f-display); font-weight: 600; font-variation-settings: var(--wdth); font-size: 2.6rem; line-height: 1; letter-spacing: -.04em; color: transparent; -webkit-text-stroke: 1px var(--gold); margin-bottom: 12px; }
+.steps h3 { font-family: var(--f-display); font-weight: 600; font-variation-settings: var(--wdth); font-size: 1.12rem; letter-spacing: -.01em; margin: 0 0 4px; }
+.steps p { margin: 0; font-size: .94rem; color: var(--soft); }
 .services { list-style: none; padding: 0; margin: 28px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); }
-.services li { padding: 16px 0; border-bottom: 1px solid var(--line); padding-inline-end: 16px; font-family: var(--font-display); font-weight: 700; font-size: 1.08rem; }
+.services li { padding: 16px 0; border-bottom: 1px solid var(--line); padding-inline-end: 16px; font-family: var(--f-display); font-weight: 600; font-variation-settings: var(--wdth); font-size: 1.08rem; letter-spacing: -.01em; }
 
 /* contact */
 .contact { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 32px; align-items: start; }
-.contact h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2rem, 5.2vw, 3.1rem); line-height: 1.15; margin: 0 0 10px; text-wrap: balance; }
+.contact h2 { font-family: var(--f-display); font-weight: 600; font-variation-settings: var(--wdth); font-size: clamp(2.2rem, 5.6vw, 4.4rem); line-height: .98; letter-spacing: -.04em; margin: 0 0 14px; color: var(--ink); text-wrap: balance; }
+.contact p { margin: 0; color: var(--soft); }
 .contact-lines { display: grid; gap: 10px; }
-.contact-lines a { display: block; border: 1px solid var(--line); background: var(--panel); border-radius: 12px; padding: 12px 14px; color: var(--ink); text-decoration: none; }
+.contact-lines a { display: block; border: 1px solid var(--line); background: var(--panel); border-radius: 12px; padding: 12px 14px; color: var(--ink); transition: border-color .3s; }
 .contact-lines a:hover { border-color: var(--gold); }
-.contact-lines span { display: block; font-size: .8rem; color: var(--muted); }
-.contact-lines b { font-weight: 600; font-size: 1.05rem; }
-.reply { margin: 4px 0 0; color: var(--muted); font-size: .92rem; }
-footer { padding-block: 26px 44px; color: var(--muted); font-size: .88rem; }
+.contact-lines span { display: block; font: 500 11px/1.6 var(--f-body); letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
+.contact-lines b { font-weight: 600; font-size: 1.02rem; }
+.reply { margin: 4px 0 0; color: var(--mute); font-size: .92rem; }
+footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--mute); font-size: .88rem; }
 
 @media (max-width: 900px) {
   .nav a.opt { display: none; }
@@ -143,35 +147,35 @@ footer { padding-block: 26px 44px; color: var(--muted); font-size: .88rem; }
   .feature .tile.v { display: none; }
 }
 @media (max-width: 480px) {
+  .nav { gap: 18px; }
   .wall .tile, .grid4 .tile, .grid3 .tile { flex-basis: 64%; }
   .steps, .services, .points { grid-template-columns: 1fr; }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
 </head>
 <body>
 
 <div class="bar">
   <div class="wrap">
-    <a class="mark" href="/#en" aria-label="Steps Marketing"><span class="w">Steps</span><span class="s">Marketing</span></a>
+    <a class="brand" href="/#en" aria-label="Steps Marketing"><img src="logo-white.png" alt="Steps Marketing"></a>
     <nav class="nav" aria-label="Page sections">
       <a href="/#en">Home</a>
       <a href="#work">Work</a>
       <a class="opt" href="#agencies">For agencies</a>
       <a class="opt" href="#how">How we work</a>
       <a href="#contact">Contact</a>
-      <a class="lang" href="index.html" lang="ar" hreflang="ar" dir="rtl">عربي</a>
+      <a class="lang" href="index.html" lang="ar" hreflang="ar" dir="rtl">العربية</a>
     </nav>
   </div>
 </div>
 
 <header class="hero wrap" id="top">
-  <h1>Behind every business<span class="dots">…</span><br>a story.</h1>
+  <h1>Behind every business…<br><span class="serif">a story.</span></h1>
   <div class="hero-row">
     <p class="lede">A content production studio from Cairo. A team of 6 making video, motion and animation in Arabic, Saudi dialect and English, always starting from the story that keeps your audience watching.</p>
     <div class="cta">
-      <a class="primary" href="#work">See the work</a>
-      <a href="#contact">Start a project</a>
+      <a class="btn" href="#work">See the work</a>
+      <a class="btn btn-line" href="#contact">Start a project</a>
     </div>
   </div>
 
@@ -194,8 +198,8 @@ footer { padding-block: 26px 44px; color: var(--muted); font-size: .88rem; }
 <main id="work">
 
 <section class="sec wrap" id="novox">
+  <div class="sec-top"><span class="idx"></span><span class="sec-k">Novox</span></div>
   <div class="sec-head">
-    <p class="eyebrow">NOVOX</p>
     <h2>A tech product, understood in seconds, in more than one dialect.</h2>
     <p>Novox is a voice assistant that answers customer calls. We made its product videos in several styles, including a series for the Saudi market in Saudi dialect.</p>
   </div>
@@ -211,8 +215,8 @@ footer { padding-block: 26px 44px; color: var(--muted); font-size: .88rem; }
 </section>
 
 <section class="sec wrap" id="fahd">
+  <div class="sec-top"><span class="idx"></span><span class="sec-k">Fahd Fares</span></div>
   <div class="sec-head">
-    <p class="eyebrow">FAHD FARES</p>
     <h2>The launch campaign for the song “Gez”, from the first countdown to the last video.</h2>
     <p>An official motion-comic video, a launch countdown to 11:11, a shoot reel with graphics, and pre-release videos.</p>
   </div>
@@ -226,8 +230,8 @@ footer { padding-block: 26px 44px; color: var(--muted); font-size: .88rem; }
 </section>
 
 <section class="sec wrap" id="series">
+  <div class="sec-top"><span class="idx"></span><span class="sec-k">The Steps page</span></div>
   <div class="sec-head">
-    <p class="eyebrow">THE STEPS PAGE</p>
     <h2>Story series we test on our own page first.</h2>
     <p>“Tales”, “The Dilemma” and “A or B?”: a story from history or a question from everyday life, with a lesson for business owners in one line. Each series has its own visual style.</p>
   </div>
@@ -242,8 +246,8 @@ footer { padding-block: 26px 44px; color: var(--muted); font-size: .88rem; }
 </section>
 
 <section class="sec wrap" id="real">
+  <div class="sec-top"><span class="idx"></span><span class="sec-k">Ads &amp; shoots</span></div>
   <div class="sec-head">
-    <p class="eyebrow">ADS &amp; SHOOTS</p>
     <h2>Ads that ask one question, and footage shot on location.</h2>
     <p>Direct ads for clinic and restaurant owners, and a real-footage video with kinetic text for a real estate broker.</p>
   </div>
@@ -255,9 +259,9 @@ footer { padding-block: 26px 44px; color: var(--muted); font-size: .88rem; }
 </section>
 
 <section class="sec wrap" id="agencies">
+  <div class="sec-top"><span class="idx"></span><span class="sec-k">For agencies</span></div>
   <div class="sec-head">
-    <p class="eyebrow">FOR AGENCIES</p>
-    <h2>An extra production team for your agency, under your name.</h2>
+    <h2>An extra production team for your agency, <span class="serif">under your name.</span></h2>
     <p>When demand outgrows your team, we produce behind the scenes, and everything reaches your client under your agency’s name.</p>
   </div>
   <ul class="points">
@@ -271,10 +275,7 @@ footer { padding-block: 26px 44px; color: var(--muted); font-size: .88rem; }
 </section>
 
 <section class="sec wrap" id="how">
-  <div class="sec-head">
-    <p class="eyebrow">HOW WE WORK</p>
-    <h2>How we work</h2>
-  </div>
+  <div class="sec-top"><span class="idx"></span><span class="sec-k">How we work</span></div>
   <ol class="steps">
     <li><h3>Find the story</h3><p>We learn your business and your audience, then pick the story that keeps them watching.</p></li>
     <li><h3>3 openings for every script</h3><p>The first three seconds decide everything, so we write three openings and you choose.</p></li>
@@ -298,7 +299,7 @@ footer { padding-block: 26px 44px; color: var(--muted); font-size: .88rem; }
 <section class="sec wrap" id="contact">
   <div class="contact">
     <div>
-      <h2>Have a story? Let’s tell it together.</h2>
+      <h2>Have a story? <span class="serif">Let’s tell it together.</span></h2>
       <p>Start with a 20-minute call. We hear about your business and send you a first idea before any commitment.</p>
     </div>
     <div class="contact-lines">
