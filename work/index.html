@@ -51,8 +51,9 @@ a { color: inherit; text-decoration: none; }
 /* top bar: same as the main site's nav */
 .bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: rgba(1, 22, 49, .84); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
 .bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px; }
+.brand { flex: none; }
 .brand img { height: 30px; width: auto; display: block; }
-.nav { display: flex; align-items: center; gap: 24px; }
+.nav { display: flex; align-items: center; gap: 24px; min-width: 0; }
 .nav a { font: 500 14px/1 var(--f-body); color: var(--soft); padding: 8px 0; position: relative; transition: color .3s; }
 .nav a:hover { color: var(--ink); }
 .nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 2px; height: 1px; background: var(--gold); transform: scaleX(0); transform-origin: right; transition: transform .35s var(--ease); }
@@ -161,7 +162,7 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
   <div class="wrap">
     <a class="brand" href="/#ar" aria-label="Steps Marketing"><img src="logo-white.png" alt="Steps Marketing"></a>
     <nav class="nav" aria-label="أقسام الصفحة">
-      <a href="/#ar">الرئيسية</a>
+      <a class="opt" href="/#ar">الرئيسية</a>
       <a href="#work">الأعمال</a>
       <a class="opt" href="#agencies">للوكالات</a>
       <a class="opt" href="#how">كيف نعمل</a>
