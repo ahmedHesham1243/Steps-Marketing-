@@ -90,8 +90,13 @@ a { color: inherit; text-decoration: none; }
 .grid4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
 .grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 
-/* gulf samples: one complete spot with sound; poster first, plays on tap */
-.spot { display: grid; grid-template-columns: minmax(0, 400px) minmax(0, 1fr); gap: 28px 44px; align-items: start; }
+/* gulf samples: five complete spots with sound; poster first, play on tap, one at a time */
+.samples { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px 14px; }
+.sample { min-width: 0; }
+.sample h3 { font-family: var(--f-display); font-weight: 700; font-size: 1.15rem; line-height: 1.35; margin: 14px 0 6px; }
+.sample .meta { margin: 0 0 6px; font-size: .9rem; color: var(--soft); display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.sample p { margin: 0; font-size: .92rem; line-height: 1.6; color: var(--soft); }
+.note { color: var(--mute); font-size: .9rem; margin: 14px 0 0; }
 .player { cursor: pointer; }
 .player video { background: #000; }
 .player .play { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; padding: 0; border: 0; appearance: none; -webkit-appearance: none; cursor: pointer; display: grid; place-items: center; background: linear-gradient(to top, rgba(0, 10, 28, .5), rgba(0, 10, 28, 0) 40%); color: var(--navy); transition: opacity .35s; }
@@ -99,15 +104,6 @@ a { color: inherit; text-decoration: none; }
 .player .play svg { width: 30px; height: 30px; margin-left: 5px; }
 .player:hover .play span { transform: scale(1.06); background: var(--gold-light); }
 .player.on .play { opacity: 0; pointer-events: none; }
-.brief { display: grid; gap: 14px; align-content: start; padding-top: 2px; }
-.brief h3 { font-family: var(--f-display); font-weight: 700; font-size: clamp(1.4rem, 2.4vw, 2rem); line-height: 1.3; margin: 0; }
-.brief h3 .en { margin-inline-start: 10px; }
-.brief p { margin: 0; color: var(--soft); font-size: 1.02rem; }
-.brief dl { margin: 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 8px 18px; border-top: 1px solid var(--line); padding-top: 14px; }
-.brief dt { color: var(--gold); font: 500 14px/1.7 var(--f-body); }
-.brief dd { margin: 0; color: var(--soft); font-size: .98rem; }
-.brief .did { margin-top: 2px; }
-.brief .note { color: var(--mute); font-size: .9rem; }
 
 /* clients */
 .clients { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 34px; padding-block: 26px; border-block: 1px solid var(--line); margin-top: 44px; }
@@ -160,20 +156,21 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
   .nav a.opt { display: none; }
   .steps, .services, .points { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .contact { grid-template-columns: 1fr; }
-  .spot { grid-template-columns: 1fr; }
-  .spot .tile.v { width: 100%; max-width: 420px; justify-self: center; }
+  .samples { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media (max-width: 760px) {
   .wall, .grid4, .grid3 { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
   .wall .tile, .grid4 .tile, .grid3 .tile { flex: 0 0 46%; scroll-snap-align: start; }
   .feature { grid-template-columns: 1fr; }
   .feature .tile.v { display: none; }
+  .samples { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
+  .sample { flex: 0 0 56%; scroll-snap-align: start; }
 }
 @media (max-width: 480px) {
   .nav { gap: 16px; }
   .wall .tile, .grid4 .tile, .grid3 .tile { flex-basis: 64%; }
   .steps, .services, .points { grid-template-columns: 1fr; }
-  .spot .tile.v { max-width: none; }
+  .sample { flex-basis: 74%; }
 }
 </style>
 </head>
@@ -229,28 +226,44 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
   <div class="sec-top"><span class="idx"></span><span class="sec-k">عيّنات للخليج</span></div>
   <div class="sec-head">
     <h2>إعلان كامل لكل سوق في الخليج، بلهجته وحكايته.</h2>
-    <p>قبل أن نتحدث، نُحب أن ترى ما نصنعه لسوقك: عيّنات كاملة من الفكرة إلى الصوت، صنعناها بمبادرتنا لعلامات افتراضية. الأولى من السعودية.</p>
+    <p>قبل أن نتحدث، نُحب أن ترى ما نصنعه لسوقك: خمس عيّنات كاملة من الفكرة إلى الصوت، واحدة لكل سوق، صنعناها بمبادرتنا لعلامات افتراضية. اضغط على أي فيديو ليعمل بالصوت.</p>
   </div>
-  <div class="spot">
-    <figure class="tile v player">
-      <video src="media/dukkani-30s.mp4" poster="media/dukkani-poster.jpg" preload="none" playsinline aria-label="إعلان دكّاني، 30 ثانية"></video>
-      <button class="play" type="button" aria-label="شغّل الإعلان بالصوت"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button>
-    </figure>
-    <div class="brief">
-      <h3>«دكّاني» <span class="en">Dukkani</span></h3>
-      <p>أبو سعد يسهر كل ليلة على دفاتر بقالته، إلى أن يفتح له ابنه التطبيق. إعلان 30 ثانية لتطبيق يدير البقالة، أنيميشن 3D بلهجة سعودية.</p>
-      <dl>
-        <dt>السوق</dt><dd>السعودية</dd>
-        <dt>النوع</dt><dd>إعلان تطبيق، 30 ثانية</dd>
-        <dt>الأسلوب</dt><dd>أنيميشن 3D بإضاءة سينمائية، تعليق صوتي باللهجة السعودية، موسيقى عود</dd>
-        <dt>التسليم</dt><dd>9:16 للريلز وسناب وتيك توك، و16:9 ليوتيوب والموقع</dd>
-      </dl>
-      <ul class="did">
-        <li>الفكرة والسكريبت</li><li>تصميم الشخصيات</li><li>أنيميشن 3D</li><li>تعليق صوتي</li><li>موسيقى ومؤثرات</li><li>شاشة ختامية</li>
-      </ul>
-      <p class="note">«دكّاني» علامة افتراضية صنعناها لهذه العيّنة. عيّنات الإمارات والكويت والبحرين في الطريق.</p>
-    </div>
+  <div class="samples">
+    <article class="sample">
+      <figure class="tile v player"><video src="media/dukkani-30s.mp4" poster="media/dukkani-poster.jpg" preload="none" playsinline aria-label="دكّاني، إعلان 30 ثانية"></video><button class="play" type="button" aria-label="شغّل «دكّاني» بالصوت"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
+      <h3>«دكّاني»</h3>
+      <p class="meta"><span class="tag">السعودية</span> إعلان تطبيق · 30 ثانية</p>
+      <p>أبو سعد يسهر على دفاتر بقالته حتى يفتح له ابنه التطبيق. أنيميشن 3D بلهجة سعودية.</p>
+    </article>
+    <article class="sample">
+      <figure class="tile v player"><video src="media/balcony-30s.mp4" poster="media/balcony-30s-poster.jpg" preload="none" playsinline aria-label="البلكونة، ريل 30 ثانية"></video><button class="play" type="button" aria-label="شغّل «البلكونة» بالصوت"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
+      <h3>«البلكونة»</h3>
+      <p class="meta"><span class="tag">الإمارات</span> ريل عقاري · 30 ثانية</p>
+      <p>مشروع «روضة ريزيدنسز» في دبي: أجمل غرفة في الشقة ليست غرفة. تعليق إنجليزي وترجمة عربية.</p>
+    </article>
+    <article class="sample">
+      <figure class="tile v player"><video src="media/smash965-24s.mp4" poster="media/smash965-24s-poster.jpg" preload="none" playsinline aria-label="طلعة ١٢، ريل 24 ثانية"></video><button class="play" type="button" aria-label="شغّل «طلعة ١٢» بالصوت"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
+      <h3>«طلعة ١٢»</h3>
+      <p class="meta"><span class="tag">الكويت</span> ريل أكل · 24 ثانية</p>
+      <p>الساعة ١٢ والشباب يسألون: شنو ناكل؟ ريل بأسلوب الفود بلوجر لبرجر «سماش ٩٦٥»، بلا تعليق صوتي والكلام كويتي على الشاشة.</p>
+    </article>
+    <article class="sample">
+      <figure class="tile v player"><video src="media/maharbay-30s.mp4" poster="media/maharbay-30s-poster.jpg" preload="none" playsinline aria-label="الويكند يبدأ من الجسر، ريل 30 ثانية"></video><button class="play" type="button" aria-label="شغّل «الويكند يبدأ من الجسر» بالصوت"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
+      <h3>«الويكند يبدأ من الجسر»</h3>
+      <p class="meta"><span class="tag">البحرين</span> ريل منتجع · 30 ثانية</p>
+      <p>من مكتب يوم الخميس إلى بحر «منتجع محار باي» في ساعة. تعليق بلهجة خليجية وترجمة إنجليزية.</p>
+    </article>
+    <article class="sample">
+      <figure class="tile v player"><video src="media/nasam-20s.mp4" poster="media/nasam-20s-poster.jpg" preload="none" playsinline aria-label="نَسَم، فيلم 20 ثانية"></video><button class="play" type="button" aria-label="شغّل «نَسَم» بالصوت"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
+      <h3>«نَسَم»</h3>
+      <p class="meta"><span class="tag">قطر</span> فيلم عطر · 20 ثانية</p>
+      <p>عطر عود من الدوحة في فيلم منتج بأسلوب CGI: قطرة، ودخان، وزجاجة. تعليق خليجي هادئ وترجمة إنجليزية.</p>
+    </article>
   </div>
+  <ul class="did">
+    <li>الفكرة والسكريبت</li><li>تصميم الشخصيات والعلامات</li><li>أنيميشن 3D ولقطات سينمائية</li><li>تعليق صوتي بلهجات الخليج</li><li>موسيقى ومؤثرات</li><li>9:16 و16:9 وترجمة</li>
+  </ul>
+  <p class="note">كل العلامات في هذا القسم افتراضية، صنعناها لهذه العيّنات.</p>
 </section>
 
 <section class="sec wrap" id="novox">
@@ -403,6 +416,7 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
     var v = fig.querySelector('video'), b = fig.querySelector('.play');
     if (!v || !b) return;
     b.addEventListener('click', function () {
+      Array.prototype.forEach.call(document.querySelectorAll('.player video'), function (o) { if (o !== v) o.pause(); });
       v.setAttribute('controls', '');
       v.muted = false;
       fig.classList.add('on');

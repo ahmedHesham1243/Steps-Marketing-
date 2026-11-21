@@ -90,8 +90,14 @@ a { color: inherit; text-decoration: none; }
 .grid4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
 .grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 
-/* gulf samples: one complete spot with sound; poster first, plays on tap */
-.spot { display: grid; grid-template-columns: minmax(0, 400px) minmax(0, 1fr); gap: 28px 44px; align-items: start; }
+/* gulf samples: five complete spots with sound; poster first, play on tap, one at a time */
+.samples { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px 14px; }
+.sample { min-width: 0; }
+.sample h3 { font-family: var(--f-display); font-weight: 600; font-variation-settings: var(--wdth); font-size: 1.12rem; letter-spacing: -.01em; line-height: 1.3; margin: 14px 0 6px; }
+.sample h3 .ar { font-family: var(--f-ar); font-weight: 500; font-size: .9rem; letter-spacing: 0; color: var(--mute); margin-left: 6px; unicode-bidi: isolate; }
+.sample .meta { margin: 0 0 6px; font-size: .88rem; color: var(--soft); display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.sample p { margin: 0; font-size: .9rem; line-height: 1.55; color: var(--soft); }
+.note { color: var(--mute); font-size: .88rem; margin: 14px 0 0; }
 .player { cursor: pointer; }
 .player video { background: #000; }
 .player .play { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; padding: 0; border: 0; appearance: none; -webkit-appearance: none; cursor: pointer; display: grid; place-items: center; background: linear-gradient(to top, rgba(0, 10, 28, .5), rgba(0, 10, 28, 0) 40%); color: var(--navy); transition: opacity .35s; }
@@ -99,15 +105,6 @@ a { color: inherit; text-decoration: none; }
 .player .play svg { width: 30px; height: 30px; margin-left: 5px; }
 .player:hover .play span { transform: scale(1.06); background: var(--gold-light); }
 .player.on .play { opacity: 0; pointer-events: none; }
-.brief { display: grid; gap: 14px; align-content: start; padding-top: 2px; }
-.brief h3 { font-family: var(--f-display); font-weight: 600; font-variation-settings: var(--wdth); font-size: clamp(1.5rem, 2.6vw, 2.2rem); letter-spacing: -.02em; line-height: 1.1; margin: 0; }
-.brief h3 .ar { font-family: var(--f-ar); font-weight: 500; font-size: 1rem; letter-spacing: 0; color: var(--mute); margin-left: 10px; unicode-bidi: isolate; }
-.brief p { margin: 0; color: var(--soft); font-size: 1.02rem; }
-.brief dl { margin: 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 8px 18px; border-top: 1px solid var(--line); padding-top: 14px; }
-.brief dt { font: 500 11px/1.9 var(--f-body); letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
-.brief dd { margin: 0; color: var(--soft); font-size: .98rem; }
-.brief .did { margin-top: 2px; }
-.brief .note { color: var(--mute); font-size: .9rem; }
 
 /* clients */
 .clients { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 34px; padding-block: 26px; border-block: 1px solid var(--line); margin-top: 44px; }
@@ -159,20 +156,21 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
   .nav a.opt { display: none; }
   .steps, .services, .points { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .contact { grid-template-columns: 1fr; }
-  .spot { grid-template-columns: 1fr; }
-  .spot .tile.v { width: 100%; max-width: 420px; justify-self: center; }
+  .samples { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media (max-width: 760px) {
   .wall, .grid4, .grid3 { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
   .wall .tile, .grid4 .tile, .grid3 .tile { flex: 0 0 46%; scroll-snap-align: start; }
   .feature { grid-template-columns: 1fr; }
   .feature .tile.v { display: none; }
+  .samples { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
+  .sample { flex: 0 0 56%; scroll-snap-align: start; }
 }
 @media (max-width: 480px) {
   .nav { gap: 18px; }
   .wall .tile, .grid4 .tile, .grid3 .tile { flex-basis: 64%; }
   .steps, .services, .points { grid-template-columns: 1fr; }
-  .spot .tile.v { max-width: none; }
+  .sample { flex-basis: 74%; }
 }
 </style>
 </head>
@@ -224,28 +222,44 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
   <div class="sec-top"><span class="idx"></span><span class="sec-k">Gulf samples</span></div>
   <div class="sec-head">
     <h2>A complete ad for each Gulf market, <span class="serif">in its own dialect and story.</span></h2>
-    <p>Before we talk, see what we make for your market: complete samples from idea to sound, produced on our own initiative for fictional brands. The first is for Saudi Arabia.</p>
+    <p>Before we talk, see what we make for your market: five complete samples from idea to sound, one per market, produced on our own initiative for fictional brands. Tap any video to play it with sound.</p>
   </div>
-  <div class="spot">
-    <figure class="tile v player">
-      <video src="media/dukkani-30s.mp4" poster="media/dukkani-poster.jpg" preload="none" playsinline aria-label="Dukkani ad, 30 seconds, Saudi dialect"></video>
-      <button class="play" type="button" aria-label="Play the ad with sound"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button>
-    </figure>
-    <div class="brief">
+  <div class="samples">
+    <article class="sample">
+      <figure class="tile v player"><video src="media/dukkani-30s.mp4" poster="media/dukkani-poster.jpg" preload="none" playsinline aria-label="Dukkani, 30-second ad"></video><button class="play" type="button" aria-label="Play Dukkani with sound"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
       <h3>Dukkani <span class="ar" lang="ar" dir="rtl">«دكّاني»</span></h3>
-      <p>Abu Saad stays up every night over his corner shop’s ledgers, until his son opens the app for him. A 30-second ad for a shop-management app: 3D animation, in Saudi dialect.</p>
-      <dl>
-        <dt>Market</dt><dd>Saudi Arabia</dd>
-        <dt>Format</dt><dd>App ad, 30 seconds</dd>
-        <dt>Style</dt><dd>3D animation with cinematic lighting, Saudi-dialect voiceover, oud score</dd>
-        <dt>Delivery</dt><dd>9:16 for Reels, Snapchat and TikTok, 16:9 for YouTube and the web</dd>
-      </dl>
-      <ul class="did">
-        <li>Concept &amp; script</li><li>Character design</li><li>3D animation</li><li>Voiceover</li><li>Music &amp; sound design</li><li>End card</li>
-      </ul>
-      <p class="note">Dukkani is a fictional brand created for this sample. The UAE, Kuwait and Bahrain samples are on the way.</p>
-    </div>
+      <p class="meta"><span class="tag">Saudi Arabia</span> App ad · 30 s</p>
+      <p>Abu Saad stays up over his shop’s ledgers until his son opens the app. 3D animation, Saudi dialect.</p>
+    </article>
+    <article class="sample">
+      <figure class="tile v player"><video src="media/balcony-30s.mp4" poster="media/balcony-30s-poster.jpg" preload="none" playsinline aria-label="The Balcony, 30-second reel"></video><button class="play" type="button" aria-label="Play The Balcony with sound"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
+      <h3>The Balcony <span class="ar" lang="ar" dir="rtl">«البلكونة»</span></h3>
+      <p class="meta"><span class="tag">UAE</span> Real-estate reel · 30 s</p>
+      <p>Rawda Residences, Dubai: the best room in the apartment isn’t a room. English voiceover, Arabic subtitles.</p>
+    </article>
+    <article class="sample">
+      <figure class="tile v player"><video src="media/smash965-24s.mp4" poster="media/smash965-24s-poster.jpg" preload="none" playsinline aria-label="The Midnight Run, 24-second reel"></video><button class="play" type="button" aria-label="Play The Midnight Run with sound"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
+      <h3>The Midnight Run <span class="ar" lang="ar" dir="rtl">«طلعة ١٢»</span></h3>
+      <p class="meta"><span class="tag">Kuwait</span> Food reel · 24 s</p>
+      <p>Midnight, and the group chat asks what to eat. A food-blogger-style reel for Smash 965: no voiceover, Kuwaiti text on screen.</p>
+    </article>
+    <article class="sample">
+      <figure class="tile v player"><video src="media/maharbay-30s.mp4" poster="media/maharbay-30s-poster.jpg" preload="none" playsinline aria-label="The Weekend Starts at the Bridge, 30-second reel"></video><button class="play" type="button" aria-label="Play The Weekend Starts at the Bridge with sound"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
+      <h3>The Weekend Starts at the Bridge <span class="ar" lang="ar" dir="rtl">«الويكند يبدأ من الجسر»</span></h3>
+      <p class="meta"><span class="tag">Bahrain</span> Resort reel · 30 s</p>
+      <p>From a Thursday desk to the sea at Mahar Bay Resort in one hour. Gulf-dialect voiceover, English subtitles.</p>
+    </article>
+    <article class="sample">
+      <figure class="tile v player"><video src="media/nasam-20s.mp4" poster="media/nasam-20s-poster.jpg" preload="none" playsinline aria-label="Nasam, 20-second film"></video><button class="play" type="button" aria-label="Play Nasam with sound"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
+      <h3>Nasam <span class="ar" lang="ar" dir="rtl">«نَسَم»</span></h3>
+      <p class="meta"><span class="tag">Qatar</span> Perfume film · 20 s</p>
+      <p>An oud perfume from Doha in a CGI-style product film: a drop, smoke and a bottle. Soft Gulf voiceover, English subtitles.</p>
+    </article>
   </div>
+  <ul class="did">
+    <li>Concept &amp; script</li><li>Character &amp; brand design</li><li>3D animation &amp; cinematic shots</li><li>Gulf-dialect voiceover</li><li>Music &amp; sound design</li><li>9:16, 16:9 &amp; subtitles</li>
+  </ul>
+  <p class="note">Every brand in this section is fictional, created for these samples.</p>
 </section>
 
 <section class="sec wrap" id="novox">
@@ -395,6 +409,7 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
     var v = fig.querySelector('video'), b = fig.querySelector('.play');
     if (!v || !b) return;
     b.addEventListener('click', function () {
+      Array.prototype.forEach.call(document.querySelectorAll('.player video'), function (o) { if (o !== v) o.pause(); });
       v.setAttribute('controls', '');
       v.muted = false;
       fig.classList.add('on');
