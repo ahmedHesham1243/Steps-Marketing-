@@ -1,7 +1,7 @@
 (function () {
   var I18N = {
     en: {
-      'nav.home': 'Home', 'nav.saudi': 'Saudi & GCC', 'nav.egypt': 'Egypt', 'nav.about': 'About', 'nav.contact': 'Contact', 'nav.cta': 'Start', 'open': 'Open',
+      'nav.home': 'Home', 'nav.saudi': 'Saudi & GCC', 'nav.egypt': 'Egypt', 'nav.work': 'Work', 'nav.about': 'About', 'nav.contact': 'Contact', 'nav.cta': 'Start', 'open': 'Open',
       'meta.1': 'Steps Marketing', 'meta.2': 'Cairo, Egypt', 'meta.3': 'Market entry · Distribution · Demand',
       'h1.l1': 'Enter Saudi Arabia', 'h1.l2': 'with a team', 'h1.l3': 'that knows it.',
       'hero.sub': 'Market entry, distribution and demand for brands expanding into the Kingdom and the GCC. And for businesses in Egypt, the content that gets them discovered.',
@@ -82,7 +82,7 @@
       'foot.rights': 'All rights reserved.'
     },
     ar: {
-      'nav.home': 'الرئيسية', 'nav.saudi': 'السعودية والخليج', 'nav.egypt': 'مصر', 'nav.about': 'من نحن', 'nav.contact': 'تواصل', 'nav.cta': 'ابدأ', 'open': 'افتح',
+      'nav.home': 'الرئيسية', 'nav.saudi': 'السعودية والخليج', 'nav.egypt': 'مصر', 'nav.work': 'أعمالنا', 'nav.about': 'من نحن', 'nav.contact': 'تواصل', 'nav.cta': 'ابدأ', 'open': 'افتح',
       'meta.1': 'Steps Marketing', 'meta.2': 'القاهرة، مصر', 'meta.3': 'دخول الأسواق · التوزيع · الطلب',
       'h1.l1': 'ادخل السوق السعودي', 'h1.l2': 'مع فريق', 'h1.l3': 'يعرفه جيدًا.',
       'hero.sub': 'دخول الأسواق، والتوزيع، وبناء الطلب للعلامات المتجهة إلى المملكة والخليج. وللشركات في مصر، المحتوى الذي يجعل عملاءها يعرفونها.',
@@ -198,6 +198,8 @@
     root.classList.toggle('ar', lang === 'ar');
     var b = document.getElementById('langBtn');
     if (b) b.textContent = lang === 'ar' ? 'English' : 'العربية';
+    var wl = document.querySelectorAll('a[data-work]');
+    for (var w = 0; w < wl.length; w++) wl[w].setAttribute('href', lang === 'ar' ? '/work/' : '/work/en.html');
     try { localStorage.setItem('steps-lang', lang); } catch (e) {}
     current = lang;
     updateReady();
