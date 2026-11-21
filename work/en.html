@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Work | Steps Marketing</title>
-<meta name="description" content="Steps Marketing's work: video, motion and animation in Arabic, Saudi dialect and English, plus production under your name for agencies.">
+<meta name="description" content="Steps Marketing's work: video, motion and animation in Arabic, Saudi dialect and English, sample ads for Gulf markets, and production under your name for agencies.">
 <meta name="theme-color" content="#011631">
 <link rel="icon" type="image/png" href="../favicon.png">
 <link rel="canonical" href="https://steps-marketing.net/work/en.html">
@@ -13,7 +13,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Steps Marketing">
 <meta property="og:title" content="Work | Steps Marketing">
-<meta property="og:description" content="Steps Marketing's work: video, motion and animation in Arabic, Saudi dialect and English, plus production under your name for agencies.">
+<meta property="og:description" content="Steps Marketing's work: video, motion and animation in Arabic, Saudi dialect and English, sample ads for Gulf markets, and production under your name for agencies.">
 <meta property="og:url" content="https://steps-marketing.net/work/en.html">
 <meta property="og:image" content="https://steps-marketing.net/work/og-work.jpg">
 <meta property="og:image:width" content="1200">
@@ -90,6 +90,25 @@ a { color: inherit; text-decoration: none; }
 .grid4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
 .grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 
+/* gulf samples: one complete spot with sound; poster first, plays on tap */
+.spot { display: grid; grid-template-columns: minmax(0, 400px) minmax(0, 1fr); gap: 28px 44px; align-items: start; }
+.player { cursor: pointer; }
+.player video { background: #000; }
+.player .play { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; padding: 0; border: 0; appearance: none; -webkit-appearance: none; cursor: pointer; display: grid; place-items: center; background: linear-gradient(to top, rgba(0, 10, 28, .5), rgba(0, 10, 28, 0) 40%); color: var(--navy); transition: opacity .35s; }
+.player .play span { width: 78px; height: 78px; border-radius: 50%; background: var(--gold); display: grid; place-items: center; box-shadow: 0 12px 32px rgba(0, 0, 0, .4); transition: transform .35s var(--ease), background .35s; }
+.player .play svg { width: 30px; height: 30px; margin-left: 5px; }
+.player:hover .play span { transform: scale(1.06); background: var(--gold-light); }
+.player.on .play { opacity: 0; pointer-events: none; }
+.brief { display: grid; gap: 14px; align-content: start; padding-top: 2px; }
+.brief h3 { font-family: var(--f-display); font-weight: 600; font-variation-settings: var(--wdth); font-size: clamp(1.5rem, 2.6vw, 2.2rem); letter-spacing: -.02em; line-height: 1.1; margin: 0; }
+.brief h3 .ar { font-family: var(--f-ar); font-weight: 500; font-size: 1rem; letter-spacing: 0; color: var(--mute); margin-left: 10px; unicode-bidi: isolate; }
+.brief p { margin: 0; color: var(--soft); font-size: 1.02rem; }
+.brief dl { margin: 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 8px 18px; border-top: 1px solid var(--line); padding-top: 14px; }
+.brief dt { font: 500 11px/1.9 var(--f-body); letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
+.brief dd { margin: 0; color: var(--soft); font-size: .98rem; }
+.brief .did { margin-top: 2px; }
+.brief .note { color: var(--mute); font-size: .9rem; }
+
 /* clients */
 .clients { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 34px; padding-block: 26px; border-block: 1px solid var(--line); margin-top: 44px; }
 .clients .lbl { font: 500 12px/1 var(--f-body); letter-spacing: .18em; text-transform: uppercase; color: var(--mute); }
@@ -140,6 +159,8 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
   .nav a.opt { display: none; }
   .steps, .services, .points { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .contact { grid-template-columns: 1fr; }
+  .spot { grid-template-columns: 1fr; }
+  .spot .tile.v { width: 100%; max-width: 420px; justify-self: center; }
 }
 @media (max-width: 760px) {
   .wall, .grid4, .grid3 { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
@@ -151,6 +172,7 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
   .nav { gap: 18px; }
   .wall .tile, .grid4 .tile, .grid3 .tile { flex-basis: 64%; }
   .steps, .services, .points { grid-template-columns: 1fr; }
+  .spot .tile.v { max-width: none; }
 }
 </style>
 </head>
@@ -162,6 +184,7 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
     <nav class="nav" aria-label="Page sections">
       <a class="opt" href="/#en">Home</a>
       <a href="#work">Work</a>
+      <a class="opt" href="#gulf">Gulf samples</a>
       <a class="opt" href="#agencies">For agencies</a>
       <a class="opt" href="#how">How we work</a>
       <a href="#contact">Contact</a>
@@ -196,6 +219,34 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
 </header>
 
 <main id="work">
+
+<section class="sec wrap" id="gulf">
+  <div class="sec-top"><span class="idx"></span><span class="sec-k">Gulf samples</span></div>
+  <div class="sec-head">
+    <h2>A complete ad for each Gulf market, <span class="serif">in its own dialect and story.</span></h2>
+    <p>Before we talk, see what we make for your market: complete samples from idea to sound, produced on our own initiative for fictional brands. The first is for Saudi Arabia.</p>
+  </div>
+  <div class="spot">
+    <figure class="tile v player">
+      <video src="media/dukkani-30s.mp4" poster="media/dukkani-poster.jpg" preload="none" playsinline aria-label="Dukkani ad, 30 seconds, Saudi dialect"></video>
+      <button class="play" type="button" aria-label="Play the ad with sound"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button>
+    </figure>
+    <div class="brief">
+      <h3>Dukkani <span class="ar" lang="ar" dir="rtl">«دكّاني»</span></h3>
+      <p>Abu Saad stays up every night over his corner shop’s ledgers, until his son opens the app for him. A 30-second ad for a shop-management app: 3D animation, in Saudi dialect.</p>
+      <dl>
+        <dt>Market</dt><dd>Saudi Arabia</dd>
+        <dt>Format</dt><dd>App ad, 30 seconds</dd>
+        <dt>Style</dt><dd>3D animation with cinematic lighting, Saudi-dialect voiceover, oud score</dd>
+        <dt>Delivery</dt><dd>9:16 for Reels, Snapchat and TikTok, 16:9 for YouTube and the web</dd>
+      </dl>
+      <ul class="did">
+        <li>Concept &amp; script</li><li>Character design</li><li>3D animation</li><li>Voiceover</li><li>Music &amp; sound design</li><li>End card</li>
+      </ul>
+      <p class="note">Dukkani is a fictional brand created for this sample. The UAE, Kuwait and Bahrain samples are on the way.</p>
+    </div>
+  </div>
+</section>
 
 <section class="sec wrap" id="novox">
   <div class="sec-top"><span class="idx"></span><span class="sec-k">Novox</span></div>
@@ -324,7 +375,7 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
 })();
 (function () {
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var vids = Array.prototype.slice.call(document.querySelectorAll('video'));
+  var vids = Array.prototype.slice.call(document.querySelectorAll('video[autoplay]'));
   if (reduce) {
     vids.forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); v.setAttribute('controls', ''); });
     return;
@@ -338,6 +389,25 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
     });
   }, { rootMargin: '120px 0px' });
   vids.forEach(function (v) { io.observe(v); });
+})();
+(function () {
+  Array.prototype.forEach.call(document.querySelectorAll('.player'), function (fig) {
+    var v = fig.querySelector('video'), b = fig.querySelector('.play');
+    if (!v || !b) return;
+    b.addEventListener('click', function () {
+      v.setAttribute('controls', '');
+      v.muted = false;
+      fig.classList.add('on');
+      var p = v.play();
+      if (p && p.catch) p.catch(function () { fig.classList.remove('on'); });
+    });
+    v.addEventListener('ended', function () { fig.classList.remove('on'); });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (!e.isIntersecting && !v.paused) v.pause(); });
+      }, { threshold: 0.2 }).observe(v);
+    }
+  });
 })();
 </script>
 </body>
