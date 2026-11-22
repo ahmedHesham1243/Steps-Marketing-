@@ -1,11 +1,11 @@
 (function () {
   var I18N = {
     en: {
-      'nav.home': 'Home', 'nav.saudi': 'Saudi & GCC', 'nav.egypt': 'Egypt', 'nav.work': 'Work', 'nav.about': 'About', 'nav.contact': 'Contact', 'nav.cta': 'Start', 'open': 'Open',
+      'nav.home': 'Home', 'nav.saudi': 'Saudi & GCC', 'nav.egypt': 'Egypt', 'nav.work': 'Portfolio', 'nav.about': 'About', 'nav.contact': 'Contact', 'nav.cta': 'Start', 'open': 'Open',
       'meta.1': 'Steps Marketing', 'meta.2': 'Cairo, Egypt', 'meta.3': 'Market entry · Distribution · Demand',
       'h1.l1': 'Enter Saudi Arabia', 'h1.l2': 'with a team', 'h1.l3': 'that knows it.',
       'hero.sub': 'Market entry, distribution and demand for brands expanding into the Kingdom and the GCC. And for businesses in Egypt, the content that gets them discovered.',
-      'hero.cta': 'Start a conversation',
+      'hero.cta': 'Start a conversation', 'hero.portfolio': 'Explore our portfolio',
       'svc.k': 'What we do',
       't1.k': 'Market entry & research', 't1.d': 'Feasibility, channel map, competitors and the regulatory landscape for your category.',
       't2.k': 'Set-up & compliance', 't2.d': 'SFDA registration guidance and the right importer or entity structure.',
@@ -82,11 +82,11 @@
       'foot.rights': 'All rights reserved.'
     },
     ar: {
-      'nav.home': 'الرئيسية', 'nav.saudi': 'السعودية والخليج', 'nav.egypt': 'مصر', 'nav.work': 'أعمالنا', 'nav.about': 'من نحن', 'nav.contact': 'تواصل', 'nav.cta': 'ابدأ', 'open': 'افتح',
+      'nav.home': 'الرئيسية', 'nav.saudi': 'السعودية والخليج', 'nav.egypt': 'مصر', 'nav.work': 'معرض الأعمال', 'nav.about': 'من نحن', 'nav.contact': 'تواصل', 'nav.cta': 'ابدأ', 'open': 'افتح',
       'meta.1': 'Steps Marketing', 'meta.2': 'القاهرة، مصر', 'meta.3': 'دخول الأسواق · التوزيع · الطلب',
       'h1.l1': 'ادخل السوق السعودي', 'h1.l2': 'مع فريق', 'h1.l3': 'يعرفه جيدًا.',
       'hero.sub': 'دخول الأسواق، والتوزيع، وبناء الطلب للعلامات المتجهة إلى المملكة والخليج. وللشركات في مصر، المحتوى الذي يجعل عملاءها يعرفونها.',
-      'hero.cta': 'ابدأ الحديث',
+      'hero.cta': 'ابدأ الحديث', 'hero.portfolio': 'استكشف معرض أعمالنا',
       'svc.k': 'ماذا نفعل',
       't1.k': 'دخول السوق والبحوث', 't1.d': 'جدوى، وخريطة قنوات، ومنافسون، والمشهد التنظيمي لفئتك.',
       't2.k': 'التأسيس والامتثال', 't2.d': 'إرشاد في تسجيل SFDA، والهيكل المناسب للاستيراد أو الكيان.',
