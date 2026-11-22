@@ -97,8 +97,6 @@ a { color: inherit; text-decoration: none; }
 .sample h3 .ar { font-family: var(--f-ar); font-weight: 500; font-size: .9rem; letter-spacing: 0; color: var(--mute); margin-left: 6px; unicode-bidi: isolate; }
 .sample .meta { margin: 0 0 6px; font-size: .88rem; color: var(--soft); display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .sample p { margin: 0; font-size: .9rem; line-height: 1.55; color: var(--soft); }
-.sample .open { display: inline-block; margin-top: 8px; font-size: .84rem; color: var(--gold); border-bottom: 1px solid var(--line-strong); }
-.sample .open:hover { border-color: var(--gold); }
 .note { color: var(--mute); font-size: .88rem; margin: 14px 0 0; }
 .player { cursor: pointer; }
 .player video { background: #000; }
@@ -204,11 +202,11 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
   </div>
 
   <div class="wall" aria-label="Highlights from our work">
-    <figure class="tile v"><video data-src="media/nx-night.mp4" muted loop playsinline preload="none" aria-label="Novox: Riyadh Never Sleeps"></video><span class="tag">Saudi dialect</span></figure>
-    <figure class="tile v"><video data-src="media/rap-shoot.mp4" muted loop playsinline preload="none" aria-label="Rap single: shoot reel"></video><span class="tag">Shoot + graphics</span></figure>
-    <figure class="tile v"><video data-src="media/shahrazad.mp4" muted loop playsinline preload="none" aria-label="Tales: Shahrazad"></video><span class="tag">Flat illustration</span></figure>
-    <figure class="tile v"><video data-src="media/theseus.mp4" muted loop playsinline preload="none" aria-label="The Dilemma: Ship of Theseus"></video><span class="tag">Classic illustration</span></figure>
-    <figure class="tile v"><video data-src="media/chocolate.mp4" muted loop playsinline preload="none" aria-label="A or B: Chocolate"></video><span class="tag">3D animation</span></figure>
+    <figure class="tile v"><video data-src="media/nx-night.mp4?v=2" poster="media/nx-night-poster.jpg" muted loop playsinline preload="none" aria-label="Novox: Riyadh Never Sleeps"></video><span class="tag">Saudi dialect</span></figure>
+    <figure class="tile v"><video data-src="media/rap-shoot.mp4?v=2" poster="media/rap-shoot-poster.jpg" muted loop playsinline preload="none" aria-label="Rap single: shoot reel"></video><span class="tag">Shoot + graphics</span></figure>
+    <figure class="tile v"><video data-src="media/shahrazad.mp4?v=2" poster="media/shahrazad-poster.jpg" muted loop playsinline preload="none" aria-label="Tales: Shahrazad"></video><span class="tag">Flat illustration</span></figure>
+    <figure class="tile v"><video data-src="media/theseus.mp4?v=2" poster="media/theseus-poster.jpg" muted loop playsinline preload="none" aria-label="The Dilemma: Ship of Theseus"></video><span class="tag">Classic illustration</span></figure>
+    <figure class="tile v"><video data-src="media/chocolate.mp4?v=2" poster="media/chocolate-poster.jpg" muted loop playsinline preload="none" aria-label="A or B: Chocolate"></video><span class="tag">3D animation</span></figure>
   </div>
 
   <div class="clients">
@@ -228,31 +226,31 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
   </div>
   <div class="samples">
     <article class="sample">
-      <figure class="tile v player"><video data-src="media/dukkani-30s.mp4" poster="media/dukkani-poster.jpg" preload="none" playsinline aria-label="Dukkani, 30-second ad"></video><button class="play" type="button" aria-label="Play Dukkani with sound"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
+      <figure class="tile v player"><video data-src="media/dukkani-30s.mp4?v=2" poster="media/dukkani-poster.jpg" preload="none" aria-label="Dukkani, 30-second ad"></video><button class="play" type="button" aria-label="Play Dukkani with sound"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
       <h3>Dukkani <span class="ar" lang="ar" dir="rtl">«دكّاني»</span></h3>
       <p class="meta"><span class="tag">Saudi Arabia</span> App ad · 30 s</p>
       <p>Abu Saad stays up over his shop’s ledgers until his son opens the app. 3D animation, Saudi dialect.</p>
     </article>
     <article class="sample">
-      <figure class="tile v player"><video data-src="media/balcony-30s.mp4" poster="media/balcony-30s-poster.jpg" preload="none" playsinline aria-label="The Balcony, 30-second reel"></video><button class="play" type="button" aria-label="Play The Balcony with sound"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
+      <figure class="tile v player"><video data-src="media/balcony-30s.mp4?v=2" poster="media/balcony-30s-poster.jpg" preload="none" aria-label="The Balcony, 30-second reel"></video><button class="play" type="button" aria-label="Play The Balcony with sound"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
       <h3>The Balcony <span class="ar" lang="ar" dir="rtl">«البلكونة»</span></h3>
       <p class="meta"><span class="tag">UAE</span> Real-estate reel · 30 s</p>
       <p>Rawda Residences, Dubai: the best room in the apartment isn’t a room. English voiceover, Arabic subtitles.</p>
     </article>
     <article class="sample">
-      <figure class="tile v player"><video data-src="media/smash965-24s.mp4" poster="media/smash965-24s-poster.jpg" preload="none" playsinline aria-label="The Midnight Run, 24-second reel"></video><button class="play" type="button" aria-label="Play The Midnight Run with sound"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
+      <figure class="tile v player"><video data-src="media/smash965-24s.mp4?v=2" poster="media/smash965-24s-poster.jpg" preload="none" aria-label="The Midnight Run, 24-second reel"></video><button class="play" type="button" aria-label="Play The Midnight Run with sound"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
       <h3>The Midnight Run <span class="ar" lang="ar" dir="rtl">«طلعة ١٢»</span></h3>
       <p class="meta"><span class="tag">Kuwait</span> Food reel · 24 s</p>
       <p>Midnight, and the group chat asks what to eat. A food-blogger-style reel for Smash 965: no voiceover, Kuwaiti text on screen.</p>
     </article>
     <article class="sample">
-      <figure class="tile v player"><video data-src="media/maharbay-30s.mp4" poster="media/maharbay-30s-poster.jpg" preload="none" playsinline aria-label="The Weekend Starts at the Bridge, 30-second reel"></video><button class="play" type="button" aria-label="Play The Weekend Starts at the Bridge with sound"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
+      <figure class="tile v player"><video data-src="media/maharbay-30s.mp4?v=2" poster="media/maharbay-30s-poster.jpg" preload="none" aria-label="The Weekend Starts at the Bridge, 30-second reel"></video><button class="play" type="button" aria-label="Play The Weekend Starts at the Bridge with sound"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
       <h3>The Weekend Starts at the Bridge <span class="ar" lang="ar" dir="rtl">«الويكند يبدأ من الجسر»</span></h3>
       <p class="meta"><span class="tag">Bahrain</span> Resort reel · 30 s</p>
       <p>From a Thursday desk to the sea at Mahar Bay Resort in one hour. Gulf-dialect voiceover, English subtitles.</p>
     </article>
     <article class="sample">
-      <figure class="tile v player"><video data-src="media/nasam-20s.mp4" poster="media/nasam-20s-poster.jpg" preload="none" playsinline aria-label="Nasam, 20-second film"></video><button class="play" type="button" aria-label="Play Nasam with sound"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
+      <figure class="tile v player"><video data-src="media/nasam-20s.mp4?v=2" poster="media/nasam-20s-poster.jpg" preload="none" aria-label="Nasam, 20-second film"></video><button class="play" type="button" aria-label="Play Nasam with sound"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
       <h3>Nasam <span class="ar" lang="ar" dir="rtl">«نَسَم»</span></h3>
       <p class="meta"><span class="tag">Qatar</span> Perfume film · 20 s</p>
       <p>An oud perfume from Doha in a CGI-style product film: a drop, smoke and a bottle. Soft Gulf voiceover, English subtitles.</p>
@@ -271,10 +269,10 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
     <p>Novox is a voice assistant that answers customer calls. We made its product videos in several styles, including a series for the Saudi market in Saudi dialect.</p>
   </div>
   <div class="grid4">
-    <figure class="tile v"><video data-src="media/nx-night.mp4" muted loop playsinline preload="none" aria-label="Riyadh Never Sleeps"></video><figcaption><span class="t">Riyadh Never Sleeps</span><span class="tag">Saudi dialect</span></figcaption></figure>
-    <figure class="tile v"><video data-src="media/nx-onecall.mp4" muted loop playsinline preload="none" aria-label="One Call"></video><figcaption><span class="t">One Call</span><span class="tag">Kinetic type</span></figcaption></figure>
-    <figure class="tile v"><video data-src="media/nx-ailies.mp4" muted loop playsinline preload="none" aria-label="Straight Up"></video><figcaption><span class="t">Straight Up</span><span class="tag">Flat illustration</span></figcaption></figure>
-    <figure class="tile v"><video data-src="media/nx-asknovox.mp4" muted loop playsinline preload="none" aria-label="Ask Novox"></video><figcaption><span class="t">Ask Novox</span><span class="tag">3D presenter</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/nx-night.mp4?v=2" poster="media/nx-night-poster.jpg" muted loop playsinline preload="none" aria-label="Riyadh Never Sleeps"></video><figcaption><span class="t">Riyadh Never Sleeps</span><span class="tag">Saudi dialect</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/nx-onecall.mp4?v=2" poster="media/nx-onecall-poster.jpg" muted loop playsinline preload="none" aria-label="One Call"></video><figcaption><span class="t">One Call</span><span class="tag">Kinetic type</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/nx-ailies.mp4?v=2" poster="media/nx-ailies-poster.jpg" muted loop playsinline preload="none" aria-label="Straight Up"></video><figcaption><span class="t">Straight Up</span><span class="tag">Flat illustration</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/nx-asknovox.mp4?v=2" poster="media/nx-asknovox-poster.jpg" muted loop playsinline preload="none" aria-label="Ask Novox"></video><figcaption><span class="t">Ask Novox</span><span class="tag">3D presenter</span></figcaption></figure>
   </div>
   <ul class="did">
     <li>Product videos</li><li>Saudi-dialect scripts</li><li>4 visual styles</li>
@@ -288,8 +286,8 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
     <p>An official motion-comic video, a launch countdown to 11:11, a shoot reel with graphics, and pre-release videos.</p>
   </div>
   <div class="feature">
-    <figure class="tile h"><video data-src="media/rap-comic.mp4" muted loop playsinline preload="none" aria-label="Rap single: official video"></video><figcaption><span class="t">Official video</span><span class="tag">Motion comic</span></figcaption></figure>
-    <figure class="tile v"><video data-src="media/rap-shoot.mp4" muted loop playsinline preload="none" aria-label="Rap single: shoot reel"></video><figcaption><span class="t">Shoot reel</span><span class="tag">Shoot + graphics</span></figcaption></figure>
+    <figure class="tile h"><video data-src="media/rap-comic.mp4?v=2" poster="media/rap-comic-poster.jpg" muted loop playsinline preload="none" aria-label="Rap single: official video"></video><figcaption><span class="t">Official video</span><span class="tag">Motion comic</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/rap-shoot.mp4?v=2" poster="media/rap-shoot-poster.jpg" muted loop playsinline preload="none" aria-label="Rap single: shoot reel"></video><figcaption><span class="t">Shoot reel</span><span class="tag">Shoot + graphics</span></figcaption></figure>
   </div>
   <ul class="did">
     <li>Official video</li><li>Motion comic</li><li>Launch countdown</li><li>Shoot reel</li><li>Pre-release videos</li>
@@ -303,12 +301,12 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
     <p>“Tales”, “The Dilemma” and “A or B?”: a story from history or a question from everyday life, with a lesson for business owners in one line. Each series has its own visual style.</p>
   </div>
   <div class="grid3">
-    <figure class="tile v"><video data-src="media/baron.mp4" muted loop playsinline preload="none" aria-label="Tales: The Baron"></video><figcaption><span class="t">Tales: The Baron</span><span class="tag">Flat illustration</span></figcaption></figure>
-    <figure class="tile v"><video data-src="media/flinch.mp4" muted loop playsinline preload="none" aria-label="Edison and the Number"></video><figcaption><span class="t">Edison and the Number</span><span class="tag">Flat illustration</span></figcaption></figure>
-    <figure class="tile v"><video data-src="media/theseus.mp4" muted loop playsinline preload="none" aria-label="The Dilemma: Ship of Theseus"></video><figcaption><span class="t">The Dilemma: Ship of Theseus</span><span class="tag">Classic illustration</span></figcaption></figure>
-    <figure class="tile v"><video data-src="media/monalisa.mp4" muted loop playsinline preload="none" aria-label="The Mona Lisa"></video><figcaption><span class="t">The Mona Lisa</span><span class="tag">Archive documentary</span></figcaption></figure>
-    <figure class="tile v"><video data-src="media/planes.mp4" muted loop playsinline preload="none" aria-label="The Planes That Came Back"></video><figcaption><span class="t">The Planes That Came Back</span><span class="tag">Archive + graphics</span></figcaption></figure>
-    <figure class="tile v"><video data-src="media/whitefriday.mp4" muted loop playsinline preload="none" aria-label="White Friday"></video><figcaption><span class="t">White Friday</span><span class="tag">Documentary edit</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/baron.mp4?v=2" poster="media/baron-poster.jpg" muted loop playsinline preload="none" aria-label="Tales: The Baron"></video><figcaption><span class="t">Tales: The Baron</span><span class="tag">Flat illustration</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/flinch.mp4?v=2" poster="media/flinch-poster.jpg" muted loop playsinline preload="none" aria-label="Edison and the Number"></video><figcaption><span class="t">Edison and the Number</span><span class="tag">Flat illustration</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/theseus.mp4?v=2" poster="media/theseus-poster.jpg" muted loop playsinline preload="none" aria-label="The Dilemma: Ship of Theseus"></video><figcaption><span class="t">The Dilemma: Ship of Theseus</span><span class="tag">Classic illustration</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/monalisa.mp4?v=2" poster="media/monalisa-poster.jpg" muted loop playsinline preload="none" aria-label="The Mona Lisa"></video><figcaption><span class="t">The Mona Lisa</span><span class="tag">Archive documentary</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/planes.mp4?v=2" poster="media/planes-poster.jpg" muted loop playsinline preload="none" aria-label="The Planes That Came Back"></video><figcaption><span class="t">The Planes That Came Back</span><span class="tag">Archive + graphics</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/whitefriday.mp4?v=2" poster="media/whitefriday-poster.jpg" muted loop playsinline preload="none" aria-label="White Friday"></video><figcaption><span class="t">White Friday</span><span class="tag">Documentary edit</span></figcaption></figure>
   </div>
 </section>
 
@@ -319,9 +317,9 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
     <p>Direct ads for clinic and restaurant owners, and a real-footage video with kinetic text for a real estate broker.</p>
   </div>
   <div class="grid3">
-    <figure class="tile v"><video data-src="media/begonia.mp4" muted loop playsinline preload="none" aria-label="Begonia: real estate video"></video><figcaption><span class="t">Begonia</span><span class="tag">Real estate</span></figcaption></figure>
-    <figure class="tile v"><video data-src="media/ad-clinic.mp4" muted loop playsinline preload="none" aria-label="Ad for clinics"></video><figcaption><span class="t">“Does your clinic’s page look like every other clinic’s?”</span><span class="tag">Direct ad</span></figcaption></figure>
-    <figure class="tile v"><video data-src="media/ad-resto.mp4" muted loop playsinline preload="none" aria-label="Ad for restaurants"></video><figcaption><span class="t">“Does your restaurant’s page look like every other restaurant’s?”</span><span class="tag">Direct ad</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/begonia.mp4?v=2" poster="media/begonia-poster.jpg" muted loop playsinline preload="none" aria-label="Begonia: real estate video"></video><figcaption><span class="t">Begonia</span><span class="tag">Real estate</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/ad-clinic.mp4?v=2" poster="media/ad-clinic-poster.jpg" muted loop playsinline preload="none" aria-label="Ad for clinics"></video><figcaption><span class="t">“Does your clinic’s page look like every other clinic’s?”</span><span class="tag">Direct ad</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/ad-resto.mp4?v=2" poster="media/ad-resto-poster.jpg" muted loop playsinline preload="none" aria-label="Ad for restaurants"></video><figcaption><span class="t">“Does your restaurant’s page look like every other restaurant’s?”</span><span class="tag">Direct ad</span></figcaption></figure>
   </div>
 </section>
 
@@ -389,13 +387,13 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
     if (sec && main && sec.parentNode === main) main.insertBefore(sec, main.firstElementChild);
   } catch (e) {}
 })();
-/* Phones allow only a handful of decoding <video> elements at once, so every video keeps its file in data-src:
-   loops get a source only near the viewport and drop it again far away; a sample player loads on tap and unloads
-   the other samples first. */
+/* Every video keeps its file in data-src so a phone never holds more than a few at once: loops get a source only near
+   the viewport (their poster shows until then, or for good if the phone blocks autoplay) and drop it far away; a sample
+   loads on tap and unloads the others. All files are H.264 level 4.1 or lower: iPhones refuse higher levels. */
 (function () {
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var loops = Array.prototype.slice.call(document.querySelectorAll('video[loop]'));
-  function load(v) { if (!v.getAttribute('src')) { v.src = v.getAttribute('data-src'); } }
+  function load(v) { if (!v.getAttribute('src')) { v.muted = true; v.src = v.getAttribute('data-src'); } }
   function unload(v) { if (v.getAttribute('src')) { v.pause(); v.removeAttribute('src'); v.load(); } }
   if (reduce) {
     loops.forEach(function (v) { load(v); v.setAttribute('preload', 'metadata'); v.setAttribute('controls', ''); });
@@ -419,26 +417,20 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
 })();
 (function () {
   var players = Array.prototype.slice.call(document.querySelectorAll('.player'));
-  /* iPhone/iPad: the page's own players hit iOS media limits, so a tap opens the system player, which always works. */
-  var ios = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-  var ar = (document.documentElement.lang || '').indexOf('ar') === 0;
   function reset(fig) {
     var o = fig.querySelector('video');
     if (!o) return;
+    fig.classList.remove('on');
     o.pause(); o.removeAttribute('controls');
     if (o.getAttribute('src')) { o.removeAttribute('src'); o.load(); }
-    fig.classList.remove('on');
   }
   players.forEach(function (fig) {
     var v = fig.querySelector('video'), b = fig.querySelector('.play');
     if (!v || !b) return;
     var src = v.getAttribute('data-src');
-    var a = document.createElement('a');
-    a.className = 'open'; a.href = src; a.target = '_blank'; a.rel = 'noopener';
-    a.textContent = ar ? 'فتح الفيديو في نافذة ↗' : 'Open the video ↗';
-    fig.parentNode.appendChild(a);
+    function openNative() { fig.classList.remove('on'); window.location.href = src; }
+    /* no playsinline on samples: an iPhone plays them in its own full-screen player, then returns to the page */
     b.addEventListener('click', function () {
-      if (ios) { window.location.href = src; return; }
       players.forEach(function (o) { if (o !== fig) reset(o); });
       Array.prototype.forEach.call(document.querySelectorAll('video[loop]'), function (o) { o.pause(); });
       if (!v.getAttribute('src')) v.src = src;
@@ -446,12 +438,13 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
       v.muted = false;
       fig.classList.add('on');
       var p = v.play();
-      if (p && p.catch) p.catch(function () { fig.classList.remove('on'); window.location.href = src; });
-      setTimeout(function () {
-        if (v.error || (v.readyState === 0 && v.networkState === 3)) { fig.classList.remove('on'); window.location.href = src; }
-      }, 5000);
+      if (p && p.catch) p.catch(function (err) {
+        if (err && err.name === 'NotSupportedError') openNative(); else fig.classList.remove('on');
+      });
     });
+    v.addEventListener('error', function () { if (fig.classList.contains('on') && v.error) openNative(); });
     v.addEventListener('ended', function () { fig.classList.remove('on'); });
+    v.addEventListener('webkitendfullscreen', function () { v.pause(); v.removeAttribute('controls'); fig.classList.remove('on'); });
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (es) {
         es.forEach(function (e) { if (!e.isIntersecting && !v.paused) v.pause(); });

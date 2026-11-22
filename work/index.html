@@ -96,8 +96,6 @@ a { color: inherit; text-decoration: none; }
 .sample h3 { font-family: var(--f-display); font-weight: 700; font-size: 1.15rem; line-height: 1.35; margin: 14px 0 6px; }
 .sample .meta { margin: 0 0 6px; font-size: .9rem; color: var(--soft); display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .sample p { margin: 0; font-size: .92rem; line-height: 1.6; color: var(--soft); }
-.sample .open { display: inline-block; margin-top: 8px; font-size: .86rem; color: var(--gold); border-bottom: 1px solid var(--line-strong); }
-.sample .open:hover { border-color: var(--gold); }
 .note { color: var(--mute); font-size: .9rem; margin: 14px 0 0; }
 .player { cursor: pointer; }
 .player video { background: #000; }
@@ -208,11 +206,11 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
   </div>
 
   <div class="wall" aria-label="مقتطفات من الأعمال">
-    <figure class="tile v"><video data-src="media/nx-night.mp4" muted loop playsinline preload="none" aria-label="نوفوكس: الرياض ما تنام"></video><span class="tag">باللهجة السعودية</span></figure>
-    <figure class="tile v"><video data-src="media/rap-shoot.mp4" muted loop playsinline preload="none" aria-label="أغنية راب: ريلز التصوير"></video><span class="tag">تصوير + جرافيك</span></figure>
-    <figure class="tile v"><video data-src="media/shahrazad.mp4" muted loop playsinline preload="none" aria-label="حكاوي: شهرزاد"></video><span class="tag">رسوم مسطحة</span></figure>
-    <figure class="tile v"><video data-src="media/theseus.mp4" muted loop playsinline preload="none" aria-label="المعضلة: سفينة ثيسيوس"></video><span class="tag">رسوم كلاسيكية</span></figure>
-    <figure class="tile v"><video data-src="media/chocolate.mp4" muted loop playsinline preload="none" aria-label="A ولا B: الشوكولاتة"></video><span class="tag">أنيميشن 3D</span></figure>
+    <figure class="tile v"><video data-src="media/nx-night.mp4?v=2" poster="media/nx-night-poster.jpg" muted loop playsinline preload="none" aria-label="نوفوكس: الرياض ما تنام"></video><span class="tag">باللهجة السعودية</span></figure>
+    <figure class="tile v"><video data-src="media/rap-shoot.mp4?v=2" poster="media/rap-shoot-poster.jpg" muted loop playsinline preload="none" aria-label="أغنية راب: ريلز التصوير"></video><span class="tag">تصوير + جرافيك</span></figure>
+    <figure class="tile v"><video data-src="media/shahrazad.mp4?v=2" poster="media/shahrazad-poster.jpg" muted loop playsinline preload="none" aria-label="حكاوي: شهرزاد"></video><span class="tag">رسوم مسطحة</span></figure>
+    <figure class="tile v"><video data-src="media/theseus.mp4?v=2" poster="media/theseus-poster.jpg" muted loop playsinline preload="none" aria-label="المعضلة: سفينة ثيسيوس"></video><span class="tag">رسوم كلاسيكية</span></figure>
+    <figure class="tile v"><video data-src="media/chocolate.mp4?v=2" poster="media/chocolate-poster.jpg" muted loop playsinline preload="none" aria-label="A ولا B: الشوكولاتة"></video><span class="tag">أنيميشن 3D</span></figure>
   </div>
 
   <div class="clients">
@@ -232,31 +230,31 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
   </div>
   <div class="samples">
     <article class="sample">
-      <figure class="tile v player"><video data-src="media/dukkani-30s.mp4" poster="media/dukkani-poster.jpg" preload="none" playsinline aria-label="دكّاني، إعلان 30 ثانية"></video><button class="play" type="button" aria-label="شغّل «دكّاني» بالصوت"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
+      <figure class="tile v player"><video data-src="media/dukkani-30s.mp4?v=2" poster="media/dukkani-poster.jpg" preload="none" aria-label="دكّاني، إعلان 30 ثانية"></video><button class="play" type="button" aria-label="شغّل «دكّاني» بالصوت"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
       <h3>«دكّاني»</h3>
       <p class="meta"><span class="tag">السعودية</span> إعلان تطبيق · 30 ثانية</p>
       <p>أبو سعد يسهر على دفاتر بقالته حتى يفتح له ابنه التطبيق. أنيميشن 3D بلهجة سعودية.</p>
     </article>
     <article class="sample">
-      <figure class="tile v player"><video data-src="media/balcony-30s.mp4" poster="media/balcony-30s-poster.jpg" preload="none" playsinline aria-label="البلكونة، ريل 30 ثانية"></video><button class="play" type="button" aria-label="شغّل «البلكونة» بالصوت"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
+      <figure class="tile v player"><video data-src="media/balcony-30s.mp4?v=2" poster="media/balcony-30s-poster.jpg" preload="none" aria-label="البلكونة، ريل 30 ثانية"></video><button class="play" type="button" aria-label="شغّل «البلكونة» بالصوت"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
       <h3>«البلكونة»</h3>
       <p class="meta"><span class="tag">الإمارات</span> ريل عقاري · 30 ثانية</p>
       <p>مشروع «روضة ريزيدنسز» في دبي: أجمل غرفة في الشقة ليست غرفة. تعليق إنجليزي وترجمة عربية.</p>
     </article>
     <article class="sample">
-      <figure class="tile v player"><video data-src="media/smash965-24s.mp4" poster="media/smash965-24s-poster.jpg" preload="none" playsinline aria-label="طلعة ١٢، ريل 24 ثانية"></video><button class="play" type="button" aria-label="شغّل «طلعة ١٢» بالصوت"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
+      <figure class="tile v player"><video data-src="media/smash965-24s.mp4?v=2" poster="media/smash965-24s-poster.jpg" preload="none" aria-label="طلعة ١٢، ريل 24 ثانية"></video><button class="play" type="button" aria-label="شغّل «طلعة ١٢» بالصوت"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
       <h3>«طلعة ١٢»</h3>
       <p class="meta"><span class="tag">الكويت</span> ريل أكل · 24 ثانية</p>
       <p>الساعة ١٢ والشباب يسألون: شنو ناكل؟ ريل بأسلوب الفود بلوجر لبرجر «سماش ٩٦٥»، بلا تعليق صوتي والكلام كويتي على الشاشة.</p>
     </article>
     <article class="sample">
-      <figure class="tile v player"><video data-src="media/maharbay-30s.mp4" poster="media/maharbay-30s-poster.jpg" preload="none" playsinline aria-label="الويكند يبدأ من الجسر، ريل 30 ثانية"></video><button class="play" type="button" aria-label="شغّل «الويكند يبدأ من الجسر» بالصوت"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
+      <figure class="tile v player"><video data-src="media/maharbay-30s.mp4?v=2" poster="media/maharbay-30s-poster.jpg" preload="none" aria-label="الويكند يبدأ من الجسر، ريل 30 ثانية"></video><button class="play" type="button" aria-label="شغّل «الويكند يبدأ من الجسر» بالصوت"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
       <h3>«الويكند يبدأ من الجسر»</h3>
       <p class="meta"><span class="tag">البحرين</span> ريل منتجع · 30 ثانية</p>
       <p>من مكتب يوم الخميس إلى بحر «منتجع محار باي» في ساعة. تعليق بلهجة خليجية وترجمة إنجليزية.</p>
     </article>
     <article class="sample">
-      <figure class="tile v player"><video data-src="media/nasam-20s.mp4" poster="media/nasam-20s-poster.jpg" preload="none" playsinline aria-label="نَسَم، فيلم 20 ثانية"></video><button class="play" type="button" aria-label="شغّل «نَسَم» بالصوت"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
+      <figure class="tile v player"><video data-src="media/nasam-20s.mp4?v=2" poster="media/nasam-20s-poster.jpg" preload="none" aria-label="نَسَم، فيلم 20 ثانية"></video><button class="play" type="button" aria-label="شغّل «نَسَم» بالصوت"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button></figure>
       <h3>«نَسَم»</h3>
       <p class="meta"><span class="tag">قطر</span> فيلم عطر · 20 ثانية</p>
       <p>عطر عود من الدوحة في فيلم منتج بأسلوب CGI: قطرة، ودخان، وزجاجة. تعليق خليجي هادئ وترجمة إنجليزية.</p>
@@ -275,10 +273,10 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
     <p>نوفوكس مساعد صوتي يرد على مكالمات العملاء. صنعنا له فيديوهات منتج بأساليب مختلفة، منها سلسلة للسوق السعودي بلهجته.</p>
   </div>
   <div class="grid4">
-    <figure class="tile v"><video data-src="media/nx-night.mp4" muted loop playsinline preload="none" aria-label="الرياض ما تنام"></video><figcaption><span class="t">«الرياض ما تنام»</span><span class="tag">باللهجة السعودية</span></figcaption></figure>
-    <figure class="tile v"><video data-src="media/nx-onecall.mp4" muted loop playsinline preload="none" aria-label="مكالمة واحدة"></video><figcaption><span class="t">«مكالمة واحدة»</span><span class="tag">كلام متحرك</span></figcaption></figure>
-    <figure class="tile v"><video data-src="media/nx-ailies.mp4" muted loop playsinline preload="none" aria-label="من الآخر"></video><figcaption><span class="t">«من الآخر»</span><span class="tag">رسوم مسطحة</span></figcaption></figure>
-    <figure class="tile v"><video data-src="media/nx-asknovox.mp4" muted loop playsinline preload="none" aria-label="اسأل نوفوكس"></video><figcaption><span class="t">«اسأل نوفوكس»</span><span class="tag">مذيعة 3D</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/nx-night.mp4?v=2" poster="media/nx-night-poster.jpg" muted loop playsinline preload="none" aria-label="الرياض ما تنام"></video><figcaption><span class="t">«الرياض ما تنام»</span><span class="tag">باللهجة السعودية</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/nx-onecall.mp4?v=2" poster="media/nx-onecall-poster.jpg" muted loop playsinline preload="none" aria-label="مكالمة واحدة"></video><figcaption><span class="t">«مكالمة واحدة»</span><span class="tag">كلام متحرك</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/nx-ailies.mp4?v=2" poster="media/nx-ailies-poster.jpg" muted loop playsinline preload="none" aria-label="من الآخر"></video><figcaption><span class="t">«من الآخر»</span><span class="tag">رسوم مسطحة</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/nx-asknovox.mp4?v=2" poster="media/nx-asknovox-poster.jpg" muted loop playsinline preload="none" aria-label="اسأل نوفوكس"></video><figcaption><span class="t">«اسأل نوفوكس»</span><span class="tag">مذيعة 3D</span></figcaption></figure>
   </div>
   <ul class="did">
     <li>فيديوهات منتج</li><li>نصوص باللهجة السعودية</li><li>4 أساليب بصرية</li>
@@ -292,8 +290,8 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
     <p>فيديو رسمي بأسلوب الموشن كوميك، وعدّاد إطلاق حتى 11:11، وريلز تصوير بالجرافيك، وفيديوهات قبل النزول.</p>
   </div>
   <div class="feature">
-    <figure class="tile h"><video data-src="media/rap-comic.mp4" muted loop playsinline preload="none" aria-label="أغنية راب: الفيديو الرسمي"></video><figcaption><span class="t">الفيديو الرسمي</span><span class="tag">موشن كوميك</span></figcaption></figure>
-    <figure class="tile v"><video data-src="media/rap-shoot.mp4" muted loop playsinline preload="none" aria-label="أغنية راب: ريلز التصوير"></video><figcaption><span class="t">ريلز التصوير</span><span class="tag">تصوير + جرافيك</span></figcaption></figure>
+    <figure class="tile h"><video data-src="media/rap-comic.mp4?v=2" poster="media/rap-comic-poster.jpg" muted loop playsinline preload="none" aria-label="أغنية راب: الفيديو الرسمي"></video><figcaption><span class="t">الفيديو الرسمي</span><span class="tag">موشن كوميك</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/rap-shoot.mp4?v=2" poster="media/rap-shoot-poster.jpg" muted loop playsinline preload="none" aria-label="أغنية راب: ريلز التصوير"></video><figcaption><span class="t">ريلز التصوير</span><span class="tag">تصوير + جرافيك</span></figcaption></figure>
   </div>
   <ul class="did">
     <li>فيديو رسمي</li><li>موشن كوميك</li><li>عدّاد إطلاق</li><li>ريلز تصوير</li><li>فيديوهات قبل النزول</li>
@@ -307,12 +305,12 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
     <p>«حكاوي» و«المعضلة» و«A ولا B؟»: حكاية من التاريخ أو سؤال من يوم الناس، ودرس لصاحب البيزنس في جملة واحدة. كل سلسلة بأسلوب بصري خاص بها.</p>
   </div>
   <div class="grid3">
-    <figure class="tile v"><video data-src="media/baron.mp4" muted loop playsinline preload="none" aria-label="حكاوي: البارون"></video><figcaption><span class="t">حكاوي: البارون</span><span class="tag">رسوم مسطحة</span></figcaption></figure>
-    <figure class="tile v"><video data-src="media/flinch.mp4" muted loop playsinline preload="none" aria-label="إديسون والرقم"></video><figcaption><span class="t">إديسون والرقم</span><span class="tag">رسوم مسطحة</span></figcaption></figure>
-    <figure class="tile v"><video data-src="media/theseus.mp4" muted loop playsinline preload="none" aria-label="المعضلة: سفينة ثيسيوس"></video><figcaption><span class="t">المعضلة: سفينة ثيسيوس</span><span class="tag">رسوم كلاسيكية</span></figcaption></figure>
-    <figure class="tile v"><video data-src="media/monalisa.mp4" muted loop playsinline preload="none" aria-label="الموناليزا"></video><figcaption><span class="t">الموناليزا</span><span class="tag">أرشيف وثائقي</span></figcaption></figure>
-    <figure class="tile v"><video data-src="media/planes.mp4" muted loop playsinline preload="none" aria-label="الطيارات اللي رجعت"></video><figcaption><span class="t">الطيارات اللي رجعت</span><span class="tag">أرشيف + جرافيك</span></figcaption></figure>
-    <figure class="tile v"><video data-src="media/whitefriday.mp4" muted loop playsinline preload="none" aria-label="الجمعة البيضا"></video><figcaption><span class="t">الجمعة البيضا</span><span class="tag">مونتاج وثائقي</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/baron.mp4?v=2" poster="media/baron-poster.jpg" muted loop playsinline preload="none" aria-label="حكاوي: البارون"></video><figcaption><span class="t">حكاوي: البارون</span><span class="tag">رسوم مسطحة</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/flinch.mp4?v=2" poster="media/flinch-poster.jpg" muted loop playsinline preload="none" aria-label="إديسون والرقم"></video><figcaption><span class="t">إديسون والرقم</span><span class="tag">رسوم مسطحة</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/theseus.mp4?v=2" poster="media/theseus-poster.jpg" muted loop playsinline preload="none" aria-label="المعضلة: سفينة ثيسيوس"></video><figcaption><span class="t">المعضلة: سفينة ثيسيوس</span><span class="tag">رسوم كلاسيكية</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/monalisa.mp4?v=2" poster="media/monalisa-poster.jpg" muted loop playsinline preload="none" aria-label="الموناليزا"></video><figcaption><span class="t">الموناليزا</span><span class="tag">أرشيف وثائقي</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/planes.mp4?v=2" poster="media/planes-poster.jpg" muted loop playsinline preload="none" aria-label="الطيارات اللي رجعت"></video><figcaption><span class="t">الطيارات اللي رجعت</span><span class="tag">أرشيف + جرافيك</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/whitefriday.mp4?v=2" poster="media/whitefriday-poster.jpg" muted loop playsinline preload="none" aria-label="الجمعة البيضا"></video><figcaption><span class="t">الجمعة البيضا</span><span class="tag">مونتاج وثائقي</span></figcaption></figure>
   </div>
 </section>
 
@@ -323,9 +321,9 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
     <p>إعلاناتنا لأصحاب العيادات والمطاعم، وفيديو بتصوير حقيقي ونصوص متحركة لوسيط عقاري.</p>
   </div>
   <div class="grid3">
-    <figure class="tile v"><video data-src="media/begonia.mp4" muted loop playsinline preload="none" aria-label="Begonia: فيديو عقاري"></video><figcaption><span class="t">Begonia</span><span class="tag">عقارات</span></figcaption></figure>
-    <figure class="tile v"><video data-src="media/ad-clinic.mp4" muted loop playsinline preload="none" aria-label="إعلان للعيادات"></video><figcaption><span class="t">«صفحة عيادتك… شبه كل العيادات؟»</span><span class="tag">إعلان مباشر</span></figcaption></figure>
-    <figure class="tile v"><video data-src="media/ad-resto.mp4" muted loop playsinline preload="none" aria-label="إعلان للمطاعم"></video><figcaption><span class="t">«صفحة مطعمك… شبه كل المطاعم؟»</span><span class="tag">إعلان مباشر</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/begonia.mp4?v=2" poster="media/begonia-poster.jpg" muted loop playsinline preload="none" aria-label="Begonia: فيديو عقاري"></video><figcaption><span class="t">Begonia</span><span class="tag">عقارات</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/ad-clinic.mp4?v=2" poster="media/ad-clinic-poster.jpg" muted loop playsinline preload="none" aria-label="إعلان للعيادات"></video><figcaption><span class="t">«صفحة عيادتك… شبه كل العيادات؟»</span><span class="tag">إعلان مباشر</span></figcaption></figure>
+    <figure class="tile v"><video data-src="media/ad-resto.mp4?v=2" poster="media/ad-resto-poster.jpg" muted loop playsinline preload="none" aria-label="إعلان للمطاعم"></video><figcaption><span class="t">«صفحة مطعمك… شبه كل المطاعم؟»</span><span class="tag">إعلان مباشر</span></figcaption></figure>
   </div>
 </section>
 
@@ -396,13 +394,13 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
     if (sec && main && sec.parentNode === main) main.insertBefore(sec, main.firstElementChild);
   } catch (e) {}
 })();
-/* Phones allow only a handful of decoding <video> elements at once, so every video keeps its file in data-src:
-   loops get a source only near the viewport and drop it again far away; a sample player loads on tap and unloads
-   the other samples first. */
+/* Every video keeps its file in data-src so a phone never holds more than a few at once: loops get a source only near
+   the viewport (their poster shows until then, or for good if the phone blocks autoplay) and drop it far away; a sample
+   loads on tap and unloads the others. All files are H.264 level 4.1 or lower: iPhones refuse higher levels. */
 (function () {
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var loops = Array.prototype.slice.call(document.querySelectorAll('video[loop]'));
-  function load(v) { if (!v.getAttribute('src')) { v.src = v.getAttribute('data-src'); } }
+  function load(v) { if (!v.getAttribute('src')) { v.muted = true; v.src = v.getAttribute('data-src'); } }
   function unload(v) { if (v.getAttribute('src')) { v.pause(); v.removeAttribute('src'); v.load(); } }
   if (reduce) {
     loops.forEach(function (v) { load(v); v.setAttribute('preload', 'metadata'); v.setAttribute('controls', ''); });
@@ -426,26 +424,20 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
 })();
 (function () {
   var players = Array.prototype.slice.call(document.querySelectorAll('.player'));
-  /* iPhone/iPad: the page's own players hit iOS media limits, so a tap opens the system player, which always works. */
-  var ios = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-  var ar = (document.documentElement.lang || '').indexOf('ar') === 0;
   function reset(fig) {
     var o = fig.querySelector('video');
     if (!o) return;
+    fig.classList.remove('on');
     o.pause(); o.removeAttribute('controls');
     if (o.getAttribute('src')) { o.removeAttribute('src'); o.load(); }
-    fig.classList.remove('on');
   }
   players.forEach(function (fig) {
     var v = fig.querySelector('video'), b = fig.querySelector('.play');
     if (!v || !b) return;
     var src = v.getAttribute('data-src');
-    var a = document.createElement('a');
-    a.className = 'open'; a.href = src; a.target = '_blank'; a.rel = 'noopener';
-    a.textContent = ar ? 'فتح الفيديو في نافذة ↗' : 'Open the video ↗';
-    fig.parentNode.appendChild(a);
+    function openNative() { fig.classList.remove('on'); window.location.href = src; }
+    /* no playsinline on samples: an iPhone plays them in its own full-screen player, then returns to the page */
     b.addEventListener('click', function () {
-      if (ios) { window.location.href = src; return; }
       players.forEach(function (o) { if (o !== fig) reset(o); });
       Array.prototype.forEach.call(document.querySelectorAll('video[loop]'), function (o) { o.pause(); });
       if (!v.getAttribute('src')) v.src = src;
@@ -453,12 +445,13 @@ footer { position: relative; z-index: 2; padding-block: 26px 44px; color: var(--
       v.muted = false;
       fig.classList.add('on');
       var p = v.play();
-      if (p && p.catch) p.catch(function () { fig.classList.remove('on'); window.location.href = src; });
-      setTimeout(function () {
-        if (v.error || (v.readyState === 0 && v.networkState === 3)) { fig.classList.remove('on'); window.location.href = src; }
-      }, 5000);
+      if (p && p.catch) p.catch(function (err) {
+        if (err && err.name === 'NotSupportedError') openNative(); else fig.classList.remove('on');
+      });
     });
+    v.addEventListener('error', function () { if (fig.classList.contains('on') && v.error) openNative(); });
     v.addEventListener('ended', function () { fig.classList.remove('on'); });
+    v.addEventListener('webkitendfullscreen', function () { v.pause(); v.removeAttribute('controls'); fig.classList.remove('on'); });
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (es) {
         es.forEach(function (e) { if (!e.isIntersecting && !v.paused) v.pause(); });
